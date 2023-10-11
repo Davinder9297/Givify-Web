@@ -3,7 +3,7 @@ import Header from './Header';
 
 export default function Donate_us(){
     return(<>
-    <Header/>
+    {/* <Header/> */}
     <div className= " mt-2 p-2 flex flex-row w-full h-auto overflow-y-hidden ">
 
     <div className=" py-3 px-3 flex-col h-[100vh] w-full border-l-2 border-black scrollbar-thin scrollbar-track-slate-200 scrollbar-thumb-slate-400 bg-slate-800 text-black  overflow-y-scroll overflow-x-auto xsm:hidden">

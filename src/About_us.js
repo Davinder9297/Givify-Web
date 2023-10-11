@@ -5,7 +5,7 @@ import Header from "./Header";
 export default function About_us() {
     return (<>
         <div>
-            <Header/>
+            {/* <Header/> */}
     <div className=" h-30 w-full p-5 mt-3  ">
     <div className=' text-left text-4xl font-BlinkMacSystemFont font-extrabold text-blue-900'>ABOUT US</div> 
     </div>
