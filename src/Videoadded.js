@@ -27,7 +27,7 @@ export default function Videoadded() {
                 <OurServices />
                 <Events />
                 <Statistics />
-                <div className="flex-col w-[470px] min-h-[260px] h-auto p-3 xsm:w-[100%]">
+                {/* <div className="flex-col w-[470px] min-h-[260px] h-auto p-3 xsm:w-[100%]">
             <div className="flex ">
                 <div className='text-xl font-bold w-[90%] xsm:text-2xl'>FAQs </div>
                 <FaQuestionCircle className='ml-1 mt-1 text-xl w-[10%] h-8 flex' />
@@ -35,8 +35,8 @@ export default function Videoadded() {
             <div className='text-sm mt-1 xsm:text-xs'>FREQUENTLY ASKED QUESTIONS</div>
             <div className=''><img className='w-40 ml-3' src="hr.png" alt="" /></div>
             <div className="accordion">
-                </div>
-            </div>
+                </div> */}
+            {/* </div> */}
                 {/* <Faq title={title} content={content}/> */}
                 <Footer />
             </div>

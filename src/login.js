@@ -114,7 +114,7 @@ export default function Login() {
                 draggable
                 pauseOnHover
             /> */}
-            <div className=" h-[60%] w-[50%] mx-auto  bg-white rounded-lg shadow-xl shadow-amber-800  xsm:w-[85%]">
+            <div className=" h-[60%] w-[50%] mx-auto  bg-white rounded-lg shadow-xl shadow-cyan-800  xsm:w-[85%]">
                 {/* <div className={`text-center  justify-center items-center h-full w-full flex absolute top-0 left-0 z-10  `}>
                     <div className="spinner-border" role="status">
                         <span className="visually-hidden">Loading...</span>
@@ -134,7 +134,7 @@ export default function Login() {
                             <input type="password"  className='outline outline-1 rounded-sm py-[6px] px-2 w-full text-base text-amber-800 outline-gray-300 mt-1' placeholder="Enter Password" />
 
                            
-                            <button  className='flex bg-yellow-400 text-amber-900 font-semibold w-full justify-center py-[6px] rounded-md mt-6 space-x-1 items-center'><BiLogIn className=' text-lg mt-[2px] text-bluamber-900' /> <div className='flex text-base'> Login</div>
+                            <button  className='flex bgimg bg-no-repeat bg-cover  text-amber-900 font-semibold w-full justify-center py-[6px] rounded-md mt-6 space-x-1 items-center'><BiLogIn className=' text-lg mt-[2px] text-bluamber-900' /> <div className='flex text-base'> Login</div>
                             </button>
                         </form>
                         <div className='flex justify-center pt-9  text-sm'>
