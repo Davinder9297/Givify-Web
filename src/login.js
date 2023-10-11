@@ -124,7 +124,7 @@ export default function Login() {
                     <div className='w-[50%]  flex justify-center items-center xsm:hidden '>
                         <img src="login_side.jpg" alt="" />
                     </div>
-                    <div className="flex-col w-[50%] text-white bg-gradient-to-r from-amber-800 via-yellow-600 to-amber-800  rounded-tr-lg rounded-br-lg h-[100%] py-2 px-3  text-xs space-y-1 xsm:w-[100%] xsm:rounded-lg">
+                    <div className="flex-col w-[50%] text-black bgimg rounded-tr-lg rounded-br-lg h-[100%] py-2 px-3  text-xs space-y-1 xsm:w-[100%] xsm:rounded-lg">
                         <div className="font-mono  font-semibold text-2xl tracking-wide text-center">Login</div>
 
                         <form action="" method="post">

@@ -2,6 +2,8 @@ import './App.css';
 import Header from './Header';
 import Home from './Home';
 import Try from './Try';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 // import Videoadded from './Videoadded';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './login';
