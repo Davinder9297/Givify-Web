@@ -2,7 +2,16 @@ import { BiLogIn } from 'react-icons/bi'
 import {Link} from 'react-router-dom'
 
 export default function Signup() {
-
+    const [username, setusername] = useState('')
+    const [password, setpassword] = useState('')
+    const [confirm, setconfirm] = useState('')
+    const [organizationname, setorganizationname] = useState('')
+    const [type, settype] = useState('')
+const submit=(e)=>{
+e.preventDefault();
+const data={username,password,confirm,organizationname,type};
+console.log(data)
+}
     return (<>
         <div className=' w-full'>
             <div className=" h-[60%] w-[40%] mx-auto rounded-lg shadow-xl shadow-gray-400  xsm:w-[85%]">
