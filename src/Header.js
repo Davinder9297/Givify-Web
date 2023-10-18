@@ -7,7 +7,7 @@ export default function Header() {
         <div>
             <div className="flex justify-between shadow-md shadow-neutral-400">
                 <div className="">
-                    <img className="h-16 ml-5 py-1" src="logo.png" alt="Givify" />
+                    <Link to='/'><img className="h-16 ml-5 py-1" src="logo.png" alt="Givify" /></Link>
                 </div>
                 <div className="flex justify-center mr-6">
                   

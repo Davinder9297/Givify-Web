@@ -1,5 +1,4 @@
 import React from 'react';
-import FloatingText from './FloatingText';
 export default function Videoadded() {
     return (
         <div className='w-[100%] '>
