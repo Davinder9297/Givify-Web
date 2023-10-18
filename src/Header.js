@@ -16,9 +16,7 @@ export default function Header() {
                     <Link to='/gallery' className="py-4 px-5 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md mx-3 m-auto">Gallery</Link>
                     <Link to='/donate_us' className="py-4 px-5 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md mx-3 m-auto">Donate Us</Link>
                     <Link to='/contact-us' className="py-4 px-5 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md mx-3 m-auto">Contact Us</Link>
-                    <Link to='/Ngo_page' className="py-4 px-5 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md mx-3 m-auto">Ngo Page</Link>
-                    <Link to='/signup' className="py-4 px-5 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md mx-3 m-auto">Sign Up</Link>
-                  
+                    <Link to='/Ngo_page' className="py-4 px-5 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md mx-3 m-auto">Ngo Page</Link>                  
                    <Link  to='/login' className="py-4 px-5 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md mx-3 m-auto">Join Us</Link>
 
                 </div>

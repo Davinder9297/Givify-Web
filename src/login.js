@@ -134,13 +134,13 @@ export default function Login() {
                             <input type="password"  className='outline outline-1 rounded-sm py-[6px] px-2 w-full text-base text-amber-800 outline-gray-300 mt-1' placeholder="Enter Password" />
 
                            
-                            <button  className='flex bgimg bg-no-repeat bg-cover  text-amber-900 font-semibold w-full justify-center py-[6px] rounded-md mt-6 space-x-1 items-center'><BiLogIn className=' text-lg mt-[2px] text-bluamber-900' /> <div className='flex text-base'> Login</div>
+                            <button  className='flex bgimg bg-no-repeat bg-cover text-black font-semibold w-full justify-center py-[6px] rounded-md mt-6 space-x-1 items-center'><BiLogIn className=' text-lg mt-[2px] text-bluamber-900' /> <div className='flex text-base'> Login</div>
                             </button>
                         </form>
                         <div className='flex justify-center pt-9  text-sm'>
 
                             <div className='mr-1'>Don't have an account?</div>
-                            <Link to='/' className='font-semibold' >Sign Up</Link>
+                            <Link to='/Signup' className='font-semibold' >Sign Up</Link>
                         </div>
                     </div>
                 </div>
