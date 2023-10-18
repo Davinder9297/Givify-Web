@@ -5,7 +5,7 @@ export default function Signup() {
     return (<>
         <div className=' w-full h-screen '>
             <div className=" w-[60%] mx-auto  bg-white rounded-lg shadow-xl shadow-cyan-800  xsm:w-[85%]">
-                <div className={`justify-around  h-full  flex  mt-16 mb-20`}>
+                <div className={`justify-around  h-full  flex  mt-10`}>
                     <div className='w-[50%]  flex justify-center items-center xsm:hidden'>
                         <img src="img3.png" className='h-full' alt="" />
                     </div>
@@ -15,6 +15,8 @@ export default function Signup() {
                         <form action="" method="post" className=''>
                             <div className='text-base font-semibold text-left ml-1 mt-3 text-gray-600'>Enter Organization Name </div>
                             <input type="text"  className='outline outline-1 px-2 rounded-md py-[4px] w-full text-base text-black outline-gray-300 mt-1' placeholder="Enter Organization Name " />
+                            <div className='text-base font-semibold text-left ml-1 mt-3 text-gray-600'>Enter Username </div>
+                            <input type="text"  className='outline outline-1 px-2 rounded-md py-[4px] w-full text-base text-black outline-gray-300 mt-1' placeholder="Enter User Name " />
                             {/* <div className='text-base mt-3 font-semibold text-left ml-1'>Re-enter Organization Name </div>
                             <input type="text"  className='outline outline-1 px-2 rounded-md py-[4px] w-full text-base text-black outline-gray-300 mt-1' placeholder="Re-enter Organization Name " /> */}
                             <div className='mt-3 font-semibold text-base text-left ml-1 text-gray-600'>Create Password</div>
