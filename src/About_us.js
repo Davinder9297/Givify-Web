@@ -11,8 +11,8 @@ export default function About_us() {
     </div>
 
 <div className="flex pl-2 h-auto justify-between flex-row mt-3 mx-1 ml-2 border-1 rounded-md flex-wrap ">
-<div className=" h-[68vh] pl-3 flex justify-center border-solid w-[56%] rounded-md  ">
-        <img className= "  border-blue-800 shadow-lg shadow-blue-300 rounded-lg" src="about_pics.jpg" alt='' />
+<div className="bgimg bg-no-repeat bg-cover  h-[68vh] pl-3 flex justify-center border-solid w-[56%] rounded-md  ">
+        <img className= "  shadow-lg shadow-blue-300 rounded-lg" src="about_pics.jpg" alt='' />
  </div>
 
 <div className=" m-1 w-[42%] font-serif bg-gradient-to-r from-sky-50 via-sky-100 to-sky-200">

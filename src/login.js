@@ -114,17 +114,17 @@ export default function Login() {
                 draggable
                 pauseOnHover
             /> */}
-            <div className=" h-[60%] w-[50%] mx-auto  bg-white rounded-lg shadow-xl shadow-amber-800  xsm:w-[85%]">
+            <div className=" h-[60%] w-[50%] mx-auto  bg-white rounded-lg shadow-xl shadow-cyan-800  xsm:w-[85%]">
                 {/* <div className={`text-center  justify-center items-center h-full w-full flex absolute top-0 left-0 z-10  `}>
                     <div className="spinner-border" role="status">
                         <span className="visually-hidden">Loading...</span>
                     </div>
                 </div> */}
                 <div className={`justify-around  h-full  flex  mt-20`}>
-                    <div className='w-[50%]  flex justify-center items-center xsm:hidden '>
-                        <img src="login_side.jpg" alt="" />
+                    <div className='w-[50%]  flex justify-center items-center xsm:hidden'>
+                        <img src="img3.png" className='h-full' alt="" />
                     </div>
-                    <div className="flex-col w-[50%] text-white bg-gradient-to-r from-amber-800 via-yellow-600 to-amber-800  rounded-tr-lg rounded-br-lg h-[100%] py-2 px-3  text-xs space-y-1 xsm:w-[100%] xsm:rounded-lg">
+                    <div className="flex-col w-[50%] text-black bgimg rounded-tr-lg rounded-br-lg h-[100%] py-2 px-3  text-xs space-y-1 xsm:w-[100%] xsm:rounded-lg">
                         <div className="font-mono  font-semibold text-2xl tracking-wide text-center">Login</div>
 
                         <form action="" method="post">
@@ -134,13 +134,13 @@ export default function Login() {
                             <input type="password"  className='outline outline-1 rounded-sm py-[6px] px-2 w-full text-base text-amber-800 outline-gray-300 mt-1' placeholder="Enter Password" />
 
                            
-                            <button  className='flex bg-yellow-400 text-amber-900 font-semibold w-full justify-center py-[6px] rounded-md mt-6 space-x-1 items-center'><BiLogIn className=' text-lg mt-[2px] text-bluamber-900' /> <div className='flex text-base'> Login</div>
+                            <button  className='flex bg-cyan-400 text-black font-semibold w-full justify-center py-[6px] rounded-md mt-6 space-x-1 items-center'><BiLogIn className=' text-lg mt-[2px] text-bluamber-900' /> <div className='flex text-base'> Login</div>
                             </button>
                         </form>
                         <div className='flex justify-center pt-9  text-sm'>
 
                             <div className='mr-1'>Don't have an account?</div>
-                            <Link to='/' className='font-semibold' >Sign Up</Link>
+                            <Link to='/Signup' className='font-semibold' >Sign Up</Link>
                         </div>
                     </div>
                 </div>
