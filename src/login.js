@@ -121,8 +121,8 @@ export default function Login() {
                     </div>
                 </div> */}
                 <div className={`justify-around  h-full  flex  mt-20`}>
-                    <div className='w-[50%]  flex justify-center items-center xsm:hidden '>
-                        <img src="login_side.jpg" alt="" />
+                    <div className='w-[50%]  flex justify-center items-center xsm:hidden'>
+                        <img src="img3.png" className='h-full' alt="" />
                     </div>
                     <div className="flex-col w-[50%] text-black bgimg rounded-tr-lg rounded-br-lg h-[100%] py-2 px-3  text-xs space-y-1 xsm:w-[100%] xsm:rounded-lg">
                         <div className="font-mono  font-semibold text-2xl tracking-wide text-center">Login</div>

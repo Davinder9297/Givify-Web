@@ -1,9 +1,9 @@
-import { BsFacebook, BsLinkedin, BsYoutube, BsTwitter } from 'react-icons/bs';
+import { BsFacebook, BsLinkedin, BsYoutube } from 'react-icons/bs';
 import { RiInstagramFill } from 'react-icons/ri';
 import { MdLocationPin } from 'react-icons/md';
 import { MdEmail } from 'react-icons/md'
 import { IoMdCall } from 'react-icons/io'
-import { MdAccessTimeFilled } from 'react-icons/md'
+// import { MdAccessTimeFilled } from 'react-icons/md'
 
 export default function Footer() {
     return (<>
@@ -27,7 +27,7 @@ export default function Footer() {
                     <li>Home</li>
                     <li>About</li>
                     <li>Gallery</li>
-                    <li>Our Partners</li>
+                    {/* <li>Our Partners</li> */}
                     <li>Join Us</li>
                 </ul>
             </div>
@@ -37,7 +37,7 @@ export default function Footer() {
                     <div className='flex'> <div className='text-lg mt-[2px] mr-1'><MdLocationPin className='text-amber-900' /></div> <div>S.A.S Nagar, Punjab</div></div>
                     <div className='flex'><IoMdCall className='h-6 text-amber-900'/><div className='ml-2'>8283929792</div></div>
                     <div className='flex'><MdEmail className='h-6 text-amber-900'/><div className='ml-2'> givify@gmail.com</div></div>
-                    <div className='flex'><MdAccessTimeFilled className='h-8 text-amber-900'/><div className='ml-2'> Monday to Friday (9:00am-5:00pm) </div></div>
+                    {/* <div className='flex'><MdAccessTimeFilled className='h-8 text-amber-900'/><div className='ml-2'> Monday to Friday (9:00am-5:00pm) </div></div> */}
                 </div>
             </div>
             </div>
