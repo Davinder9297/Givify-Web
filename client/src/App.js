@@ -14,7 +14,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from './login';
 import Footer from './Footer';
 import ContactForm from './ContactForm';
-import NgoPage from './Ngo_page';
+import NgoPage from './NgoPage';
 import Signup from './SignUp';
 function App() {
   return (
