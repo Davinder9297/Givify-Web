@@ -7,6 +7,13 @@
   pointer-events: none;
 }
 
+/* contact form bg  */
+.contact_form-bg{
+  background: url('../public/contact.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -118,4 +125,8 @@
 .f_name{
   font-size: 20px;
 }
+
+
+
+
 
