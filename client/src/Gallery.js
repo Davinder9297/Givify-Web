@@ -1,6 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // import FloatingText from './FloatingText';
 export default function Gallery() {
+    const [data, setdata] = useState([])
+    useEffect(() => {
+        const url = "http://localhost:5000/gallery";
+        // const url1 = "http://localhost:3000/api/placementevents";
+      
+      
+        const fetchData = async () => {
+          try {
+           
+            let response = await fetch(url);
+            let json = await response.json();
+            // console.log(json);
+            setdata(json)
+           
+          } catch (error) {
+            // setshow('hidden')
+            // setspin('')
+            console.log("error", error);
+          }
+        };
+      
+        fetchData();
+      }, []);
     return (
         <div className='w-[100%] mt-10'>
             <div className='flex justify-evenly'>
