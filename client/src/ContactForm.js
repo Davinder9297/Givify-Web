@@ -1,20 +1,106 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function ContactForm() {
+const [name, setname] = useState('')
+const [email, setemail] = useState('')
+const [phone, setphone] = useState('')
+const [message, setmessage] = useState('')
+const [spin, setspin] = useState('hidden')
+const [content, setcontent] = useState('')
+const submit = async (e) => {
+  e.preventDefault();
+  setcontent('hidden')
+  setspin('loader')
+  try {
+      const formData = { name, email, phone, message };
+      if(name=="" || message=="" || email=="" || phone=="" ){
+          setcontent('')
+          setspin('hidden')
+          toast.warning('Every input must be filled', {
+              position: "top-right",
+              autoClose: 1000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
 
+          });
+      }
+      else{
+          
+      const response = await fetch('http://localhost:5000/contact', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+         
+          toast.success('Details Sent Successfully', {
+              position: "top-right",
+              autoClose: 1000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+
+          });
+          setcontent('')
+          setspin('hidden')
+          // alert(data.message);
+      } else {
+          setcontent('')
+          setspin('hidden')
+          toast.warning('Something Wrong', {
+              position: "top-right",
+              autoClose: 1000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+
+          });
+      }
+      }
+
+  
+  } catch (error) {
+      setcontent('')
+      setspin('hidden')
+      toast.warning('Technical issues', {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+
+      });
+      // console.error('Error:', error);
+      // alert('An error occurred while sending the request');
+  }
+};
   return (
     <>
 
-      <section class="flex justify-center bg-white py-20 lg:py-[120px] overflow-hidden relative z-10">
-        <div class="container">
-          <div class="flex flex-wrap lg:justify-between -mx-4">
-            <div class="w-full lg:w-1/2 xl:w-6/12 px-4">
-              <div class="max-w-[570px] mb-12 lg:mb-0">
-                <span class="block mb-4 text-base text-primary font-semibold">
+      <section className="flex justify-center bg-white py-20 lg:py-[120px] overflow-hidden relative z-10">
+        <div className="container">
+          <div className="flex flex-wrap lg:justify-between -mx-4">
+            <div className="w-full lg:w-1/2 xl:w-6/12 px-4">
+              <div className="max-w-[570px] mb-12 lg:mb-0">
+                <span className="block mb-4 text-base text-primary font-semibold">
                   Contact Us
                 </span>
                 <h2
-                  class="
+                  className="
                   text-dark
                   mb-6
                   uppercase
@@ -27,21 +113,23 @@ function ContactForm() {
                 >
                   GET IN TOUCH WITH US
                 </h2>
-                <p class="text-base text-body-color leading-relaxed mb-9">
+                <p className="text-base text-body-color leading-relaxed mb-9">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                   eius tempor incididunt ut labore et dolore magna aliqua. Ut enim
                   adiqua minim veniam quis nostrud exercitation ullamco
                 </p>
               </div>
             </div>
-            <div class="w-full lg:w-1/2 xl:w-5/12 px-4">
-              <div class="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
+            <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
+              <div className="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
                 <form>
-                  <div class="mb-6">
+                  <div className="mb-6">
                     <input
+                    value={name}
+                    onChange={(e)=>{setname(e.target.value)}}
                       type="text"
                       placeholder="Your Name"
-                      class="
+                      className="
                         w-full
                         rounded
                         py-3
@@ -54,11 +142,13 @@ function ContactForm() {
                         "
                     />
                   </div>
-                  <div class="mb-6">
+                  <div className="mb-6">
                     <input
+                     value={email}
+                     onChange={(e)=>{setemail(e.target.value)}}
                       type="email"
                       placeholder="Your Email"
-                      class="
+                      className="
                         w-full
                         rounded
                         py-3
@@ -71,11 +161,13 @@ function ContactForm() {
                         "
                     />
                   </div>
-                  <div class="mb-6">
+                  <div className="mb-6">
                     <input
+                     value={phone}
+                     onChange={(e)=>{setphone(e.target.value)}}
                       type="text"
                       placeholder="Your Phone"
-                      class="
+                      className="
                         w-full
                         rounded
                         py-3
@@ -88,11 +180,13 @@ function ContactForm() {
                         "
                     />
                   </div>
-                  <div class="mb-6">
+                  <div className="mb-6">
                     <textarea
+                     value={message}
+                     onChange={(e)=>{setmessage(e.target.value)}}
                       rows="6"
                       placeholder="Your Message"
-                      class="
+                      className="
                         w-full
                         rounded
                         py-3
@@ -108,8 +202,9 @@ function ContactForm() {
                   </div>
                   <div>
                     <button
+                    onClick={submit}
                       type="submit"
-                      class="
+                      className="
                         w-full
                         text-black
                         bg-primary
@@ -125,7 +220,7 @@ function ContactForm() {
                   </div>
                 </form>
                 <div>
-                  <span class="absolute -top-10 -right-9 z-[-1]">
+                  <span className="absolute -top-10 -right-9 z-[-1]">
                     <svg
                       width="100"
                       height="100"
@@ -141,7 +236,7 @@ function ContactForm() {
                       />
                     </svg>
                   </span>
-                  <span class="absolute -right-10 top-[90px] z-[-1]">
+                  <span className="absolute -right-10 top-[90px] z-[-1]">
                     <svg
                       width="34"
                       height="134"
@@ -361,7 +456,7 @@ function ContactForm() {
                       />
                     </svg>
                   </span>
-                  <span class="absolute -left-7 -bottom-7 z-[-1]">
+                  <span className="absolute -left-7 -bottom-7 z-[-1]">
                     <svg
                       width="107"
                       height="134"
