@@ -7,17 +7,14 @@ const [name, setname] = useState('')
 const [email, setemail] = useState('')
 const [phone, setphone] = useState('')
 const [message, setmessage] = useState('')
-const [spin, setspin] = useState('hidden')
-const [content, setcontent] = useState('')
+
 const submit = async (e) => {
   e.preventDefault();
-  setcontent('hidden')
-  setspin('loader')
+  
   try {
       const formData = { name, email, phone, message };
       if(name=="" || message=="" || email=="" || phone=="" ){
-          setcontent('')
-          setspin('hidden')
+        
           toast.warning('Every input must be filled', {
               position: "top-right",
               autoClose: 1000,
@@ -51,12 +48,10 @@ const submit = async (e) => {
               progress: undefined,
 
           });
-          setcontent('')
-          setspin('hidden')
+          
           // alert(data.message);
       } else {
-          setcontent('')
-          setspin('hidden')
+        
           toast.warning('Something Wrong', {
               position: "top-right",
               autoClose: 1000,
@@ -72,8 +67,7 @@ const submit = async (e) => {
 
   
   } catch (error) {
-      setcontent('')
-      setspin('hidden')
+     
       toast.warning('Technical issues', {
           position: "top-right",
           autoClose: 1000,
@@ -92,6 +86,17 @@ const submit = async (e) => {
     <>
 
       <section className="flex justify-center bg-white py-20 lg:py-[120px] overflow-hidden relative z-10">
+      <ToastContainer
+                position="top-right"
+                autoClose={1000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         <div className="container">
           <div className="flex flex-wrap lg:justify-between -mx-4">
             <div className="w-full lg:w-1/2 xl:w-6/12 px-4">
@@ -122,7 +127,7 @@ const submit = async (e) => {
             </div>
             <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
               <div className="bg-white relative rounded-lg p-8 sm:p-12 shadow-lg">
-                <form>
+                <form method='post' action="">
                   <div className="mb-6">
                     <input
                     value={name}
@@ -200,20 +205,20 @@ const submit = async (e) => {
                         "
                     ></textarea>
                   </div>
-                  <div>
+                  <div className='flex space-x-0'>
                     <button
                     onClick={submit}
                       type="submit"
-                      className="
-                        w-full
+                      className=
+                       {` w-full
                         text-black
                         bg-primary
                         rounded
                         border border-primary
                         p-3
                         transition
-                        hover:bg-opacity-90
-                        "
+                        hover:bg-opacity-90`}
+                        
                     >
                       Send Message
                     </button>
@@ -229,8 +234,8 @@ const submit = async (e) => {
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        fill-rule="evenodd"
-                        clip-rule="evenodd"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
                         d="M0 100C0 44.7715 0 0 0 0C55.2285 0 100 44.7715 100 100C100 100 100 100 0 100Z"
                         fill="#3056D3"
                       />
