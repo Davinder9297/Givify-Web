@@ -2,8 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose=require('mongoose');
-const signup = require('./models/signup');
-const gallery = require('./models/gallery');
+const contact = require('./models/contact');
+
 mongoose.set("strictQuery", false);
 mongoose.connect("mongodb+srv://davinder:davinder@cluster0.ed9lgev.mongodb.net/");
 const app = express();
@@ -17,6 +17,15 @@ app.post('/signup', async(req, res) => {
     let data=new signup(formdata);
     await data.save();
     res.json({ message: 'User registered successfully'}).status(200);
+
+
+
+});
+app.post('/contact', async(req, res) => {
+    let formdata=req.body;
+    let data=new contact(formdata);
+    await data.save();
+    res.json({ message: 'details sent successfully'}).status(200);
 
 
 
