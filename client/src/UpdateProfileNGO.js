@@ -206,9 +206,26 @@ export default function UpdateProfileNGO() {
                     </nav > */}
                 </div >
 
-            <div className='border-2 border-solid border-gray-600 w-[50%]'>
+            <div className='border-2 border-solid border-gray-600 w-[50%] p-10'>
                 <div>
+                <div className='flex space-y-4'>
+                                <div>
+                                    Total members of Organization :
+                                </div>
+                                <div className='ml-24'>
+                                    <input type='email' placeholder='Members of organization' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
 
+                                </div>
+                            </div>
+                            <div className='flex'>
+                                <div>
+                                    Total Children Served :
+                                </div>
+                                <div className='ml-24'>
+                                    <input type='email' placeholder='Children in Orgsnization' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
+
+                                </div>
+                            </div>
                 </div>
             </div>
             </div >
