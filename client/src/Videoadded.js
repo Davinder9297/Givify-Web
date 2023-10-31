@@ -23,8 +23,9 @@ export default function Videoadded() {
                     Different Services Provided by Us
             </div>
 
-            <div className='w-[100%] mt-5'>
+            <div className='w-[100%] mt-2'>
                 <OurServices />
+                <div className='w-[100%] z-0 mt-5 font-p text-4xl mb-3'>Our Events</div>
                 <Events />
                 <Statistics />
                 {/* <div className="flex-col w-[470px] min-h-[260px] h-auto p-3 xsm:w-[100%]">
