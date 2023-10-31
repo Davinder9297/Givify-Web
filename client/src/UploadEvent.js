@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SidebarNGO from "./admin/SidebarNGO";
 // import { Link } from "react-router-dom";
 // import Navbar from "../../components/navbar"
 // import TeacherNavbar from "../../components/teacher_navbar"
@@ -161,16 +162,18 @@ const handledoc=async(evnt)=>{
 // }
     return (<>
 
-        <div className="">
+        <div className="flex">
             {/* <Navbarres />
             <TeacherNavbar /> */}
+            <div className="w-[20%] ml-0">
+            <SidebarNGO/></div>
 
-            <div className="">
+            <div className="w-[80%]">
                 <div className="xsm:text-xl m-auto text-center text-4xl font-semibold p-4 overflow-hidden w-[100%] mb-2">
                     Event Uploading
                 </div>
 
-                <div className=" m-auto w-[70%] shadow-md  shadow-zinc-900 h-full xsm:text-lg xsm:w-[90%]">
+                <div className=" m-auto w-[90%] shadow-md  shadow-zinc-900 h-full xsm:text-lg xsm:w-[90%]">
                     <div>
                         <select  onChange={changeSelectOptionHandler} name="select1" id="select1" className="xsm:text-base outline cursor-pointer outline-1 w-full outline-gray-300 bg-cyan-300 p-2 text-xl text-center overflow-auto scrollbar-thin scrollbar-thumb-zinc-900">
                             <option className="bg-cyan-100 " value="">-- Event Type --</option >
@@ -234,11 +237,11 @@ const handledoc=async(evnt)=>{
                             </div>
                         </div>
                         <div className="space-x-16 justify-center flex items-center  xsm:flex-col xsm:space-x-0">
-                            <button /* onClick={upload} */ disabled={disable} className={`shadow-amber-400 shadow-inner rounded bg-amber-800 p-2 mt-9 mb-9 px-5 hover:bg-amber-700 text-white ${opac} xsm:text-base`}> 
+                            <button /* onClick={upload} */ disabled={disable} className={`shadow-cyan-400 shadow-inner rounded bg-cyan-800 p-2 mt-9 mb-9 px-5 hover:bg-cyan-700 text-white ${opac} xsm:text-base`}> 
                                 
                                 Upload</button>
-                            {/* <Link className=" cursor-pointer " href={"/teacher/view_submitted_assignment"}><div className="shadow-amber-400 cursor-pointer shadow-inner rounded bg-amber-800 p-2 mt-9 mb-9 px-5 hover:bg-amber-700 text-white xsm:mt-0 xsm:text-base">View Submitted Assignments</div></Link> */}
-                            {/* <button className="shadow-amber-400 shadow-inner rounded bg-amber-800 p-2 mt-9 mb-9 px-5 hover:bg-amber-700 hover:text-white ">Cancel</button> */}
+                            {/* <Link className=" cursor-pointer " href={"/teacher/view_submitted_assignment"}><div className="shadow-cyan-400 cursor-pointer shadow-inner rounded bg-cyan-800 p-2 mt-9 mb-9 px-5 hover:bg-cyan-700 text-white xsm:mt-0 xsm:text-base">View Submitted Assignments</div></Link> */}
+                            {/* <button className="shadow-cyan-400 shadow-inner rounded bg-cyan-800 p-2 mt-9 mb-9 px-5 hover:bg-cyan-700 hover:text-white ">Cancel</button> */}
                         </div>
 
                     </div>

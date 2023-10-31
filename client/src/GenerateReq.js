@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SidebarNGO from "./admin/SidebarNGO";
 // import { Link } from "react-router-dom";
 // import Navbar from "../../components/navbar"
 // import TeacherNavbar from "../../components/teacher_navbar"
@@ -165,7 +166,9 @@ const handledoc=async(evnt)=>{
             {/* <Navbarres />
             <TeacherNavbar /> */}
 
-            <div className="">
+            <div className="flex">
+                <div className="w-20%"><SidebarNGO/></div>
+                <div className="w-[80%]">
                 <div className="xsm:text-xl m-auto text-center text-4xl font-semibold p-4 overflow-hidden w-[100%] mb-2">
                     Requirement Generation
                 </div>
@@ -173,13 +176,13 @@ const handledoc=async(evnt)=>{
                 <div className=" m-auto w-[70%] shadow-md  shadow-zinc-900 h-full xsm:text-lg xsm:w-[90%]">
                     <div>
                         <select  onChange={changeSelectOptionHandler} name="select1" id="select1" className="xsm:text-base outline cursor-pointer outline-1 w-full outline-gray-300 bg-cyan-300 p-2 text-xl text-center overflow-auto scrollbar-thin scrollbar-thumb-zinc-900">
-                            <option className="bg-cyan-100 " value="">-- Event Type --</option >
-                            <option className="bg-cyan-100 " value="Environmental Drive">Environmental Drive</option >
+                            <option className="bg-cyan-100 " value="">-- Requirement Type --</option >
+                            {/* <option className="bg-cyan-100 " value="Environmental Drive">Environmental Drive</option > */}
                             <option className="bg-cyan-100 " value="Food">Food</option >
                             <option className="bg-cyan-100 " value="Education">Education</option >
                             <option className="bg-cyan-100 " value="Medical">Medical</option >
                             <option className="bg-cyan-100 " value="Clothes">Clothes</option >
-                            <option className="bg-cyan-100 " value="Animal">Animal</option >
+                            <option className="bg-cyan-100 " value="Money">Money</option >
                             {/* <option className="bg-cyan-100 " value="7th">Seventh Semester</option > */}
                         </select>
                     </div>
@@ -202,7 +205,7 @@ const handledoc=async(evnt)=>{
                             </div>
 
                         </div>
-                        <div className="border-b-2 mb-26 border-solid border-zinc-300 flex xsm:flex-col xsm:w-full  ">
+                        {/* <div className="border-b-2 mb-26 border-solid border-zinc-300 flex xsm:flex-col xsm:w-full  ">
                             <div className="w-[50%]  text-center xsm:mx-auto xsm:w-full xsm:text-base xsm:font-semibold">
                             Event Date
                             </div>
@@ -210,10 +213,10 @@ const handledoc=async(evnt)=>{
                                 <input type="date" aria-placeholder="" value={deadline} onChange={(e)=>(setdeadline(e.target.value))} className="xsm:text-base pl-2 h-8 w-[85%] bg-zinc-200 form-control" placeholder="Enter the Title here" ></input>
                             </div>
 
-                        </div>
+                        </div> */}
                         <div className="border-b-2 border-solid border-zinc-300 flex xsm:flex-col xsm:w-full  ">
                             <div className="p-3 w-[50%]  text-center xsm:mx-auto xsm:w-full xsm:text-base xsm:font-semibold">
-                            Event Description
+                            Requirement Details
                             </div>
                             <div className="w-[40%] my-auto xsm:mx-auto xsm:w-full xsm:flex xsm:justify-center ">
                                 <textarea type="" aria-placeholder="" value={deadline} onChange={(e)=>(setdeadline(e.target.value))} className="xsm:text-base pl-2 h-8 w-[85%] bg-zinc-200 form-control" placeholder="Enter Descrption" ></textarea>
@@ -234,14 +237,15 @@ const handledoc=async(evnt)=>{
                             </div> 
                         </div>*/}
                         <div className="space-x-16 justify-center flex items-center  xsm:flex-col xsm:space-x-0">
-                            <button /* onClick={upload} */ disabled={disable} className={`shadow-amber-400 shadow-inner rounded bg-amber-800 p-2 mt-9 mb-9 px-5 hover:bg-amber-700 text-white ${opac} xsm:text-base`}> 
+                            <button /* onClick={upload} */ disabled={disable} className={`shadow-cyan-400 shadow-inner rounded bg-cyan-800 p-2 mt-9 mb-9 px-5 hover:bg-cyan-700 text-white ${opac} xsm:text-base`}> 
                                 
                                 Upload</button>
-                            {/* <Link className=" cursor-pointer " href={"/teacher/view_submitted_assignment"}><div className="shadow-amber-400 cursor-pointer shadow-inner rounded bg-amber-800 p-2 mt-9 mb-9 px-5 hover:bg-amber-700 text-white xsm:mt-0 xsm:text-base">View Submitted Assignments</div></Link> */}
-                            {/* <button className="shadow-amber-400 shadow-inner rounded bg-amber-800 p-2 mt-9 mb-9 px-5 hover:bg-amber-700 hover:text-white ">Cancel</button> */}
+                            {/* <Link className=" cursor-pointer " href={"/teacher/view_submitted_assignment"}><div className="shadow-cyan-400 cursor-pointer shadow-inner rounded bg-cyan-800 p-2 mt-9 mb-9 px-5 hover:bg-cyan-700 text-white xsm:mt-0 xsm:text-base">View Submitted Assignments</div></Link> */}
+                            {/* <button className="shadow-cyan-400 shadow-inner rounded bg-cyan-800 p-2 mt-9 mb-9 px-5 hover:bg-cyan-700 hover:text-white ">Cancel</button> */}
                         </div>
 
                     </div>
+                </div>
                 </div>
             </div>
         </div>
