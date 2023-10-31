@@ -10,7 +10,7 @@ export default function NgoPage() {
                     {/* LHS */}
                     <div className="w-[30%] bgimg bg-cover">
                         <div className="flex justify-center  ">
-                            <img src="/img1.png" height={40} width='100%' className="shadow-md shadow-gray-400" />
+                            <img src="/img1.png" alt='uni' height={40} width='100%' className="shadow-md shadow-gray-400" />
                         </div>
                         <div className="mt-4 text-left p-3">
                             <div>E-mail Address :</div>
