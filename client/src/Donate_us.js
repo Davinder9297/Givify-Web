@@ -1,10 +1,15 @@
 import { useEffect, useState } from 'react';
 import Header from './Header';
 import { GoOrganization } from 'react-icons/go';
+import Cookies from 'universal-cookie';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 export default function Donate_us() {
   const [data, setdata] = useState([])
+  // let cookie=new Cookies()
+  let navigate=useNavigate()
+  
   useEffect(() => {
     const url = "http://localhost:5000/signup";
     // const url1 = "http://localhost:3000/api/placementevents";
@@ -33,7 +38,7 @@ export default function Donate_us() {
 
     let temp = data.filter((currelem) => {
 
-      return currelem.location == e.target.value;
+      return currelem.state == e.target.value;
     })
     // if (temp.length == 0) {
     //   setnorecord('')
@@ -60,14 +65,14 @@ export default function Donate_us() {
           <div className='flex-col space-y-2'>
 
             <div className=' text-white flex-col w-full space-y-3'>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black bg-fixed text-xl font-medium ">Punjab</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium ">Haryana</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium ">Chandigarh</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium ">Delhi</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium ">Rajasthan</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium ">Gujrat</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium ">UP</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium ">Jammu </button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black bg-fixed text-xl font-medium " value='punjab'>Punjab</button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='haryana'>Haryana</button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='chandigarh'>Chandigarh</button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='delhi'>Delhi</button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='rajasthan'> Rajasthan</button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='gujrat'> Gujrat</button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='up'>UP</button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='jammu'>Jammu </button> </div></div>
 
 
 
@@ -84,14 +89,14 @@ export default function Donate_us() {
         <div className=" mt-10 px-4 flex flex-row justify-center space-x-10">
           {data.map((da) => {
             return (
-              <div className="flex-col h-[350px] w-[300px] rounded-lg mb-5 shadow-2xl hover:scale-95 transition duration-300 ease-in ">
+              <div className="flex-col h-[380px] w-[300px] rounded-lg mb-5 shadow-2xl hover:scale-95 transition duration-300 ease-in ">
                 <div className=" flex justify-center"><img className=" w-52 h-48 mt-2" src="work1.png" alt="" /></div>
                 <div className="px-1 mt-4 text-lg font-bold">NGO NAME</div>
                 <div className="px-1 text-sm">We are an organisation which is working for the well-being of the society and its people.</div>
-                <button className='bg-cyan-100 w-[90%] mt-5 rounded-md p-1'>
+            <div className='mt-5'>  <Link to='/NgoPage'  className='bg-cyan-100 w-full no-underline  rounded-md py-1 px-[120px]'>
                   View
-                </button>
-              </div>
+                </Link></div>
+            </div>
             )
           })}
           {/* <div className="flex-col h-[350px] w-[300px] rounded-lg mb-5 shadow-2xl hover:scale-95 transition duration-300 ease-in ">

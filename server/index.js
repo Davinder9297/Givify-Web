@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose=require('mongoose');
 const contact = require('./models/contact');
+const signup = require('./models/signup');
+const gallery = require('./models/gallery');
 
 mongoose.set("strictQuery", false);
 mongoose.connect("mongodb+srv://davinder:davinder@cluster0.ed9lgev.mongodb.net/");
