@@ -20,12 +20,13 @@ export default function Header() {
                 <div className="flex justify-center mr-1">
                   
 
-                    <Link to='/about' className="py-3 px-3 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md  m-auto ">About Us</Link>
-                    <Link to='/gallery' className="py-3 px-3 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md  m-auto">Gallery</Link>
-                    <Link to='/donate_us' className="py-3 px-3 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md  m-auto">Donate Us</Link>
-                    <Link to='/contact-us' className="py-3 px-3 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md  m-auto">Contact Us</Link>
-                    <Link to='/Ngo_page' className="py-3 px-3 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md  m-auto">Ngo Page</Link>                  
-                   {yes?<Sidebar/>:<Link  to='/login' className="py-3 px-3 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md  m-auto">Join Us</Link>
+                    <Link to='/about' className="py-3 px-3 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md  m-auto  nobg">About Us</Link>
+                    <Link to='/gallery' className="py-3 px-3 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md  m-auto nobg">Gallery</Link>
+                    <Link to='/donate_us' className="py-3 px-3 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md  m-auto nobg">Donate Us</Link>
+                    <Link to='/contact-us' className="py-3 px-3 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md  m-auto nobg">Contact Us</Link>
+                    <Link to='/Ngo_page' className="py-3 px-3 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md  m-auto nobg">Ngo Page</Link>                  
+                    <Link to='/Adminpage' className="py-3 px-3 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md  m-auto nobg">Admin</Link>                  
+                   {yes?<Sidebar/>:<Link  to='/login' className="py-3 px-3 hover:border-solid hover:border-b-4 hover:rounded-b-none hover:border-black  cursor-pointer rounded-md  m-auto nobg">Join Us</Link>
 }
                 </div>
             </div>

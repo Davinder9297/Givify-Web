@@ -104,3 +104,8 @@
   .f_name{
     font-size:20px;
   }
+  .nobg{
+    text-decoration: none;
+    text-decoration-color: black;
+    color: black;
+  }

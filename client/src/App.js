@@ -16,6 +16,10 @@ import Footer from './Footer';
 import ContactForm from './ContactForm';
 import NgoPage from './NgoPage';
 import Signup from './SignUp';
+import NgoAdmin from './admin/NgoAdmin';
+import UpdateProfileNGO from './UpdateProfileNGO';
+import UploadEvent from './UploadEvent';
+import GenerateReq from './GenerateReq';
 function App() {
   return (
     <div className="App h-screen">
@@ -32,6 +36,10 @@ function App() {
           <Route path="/contact-us" element={<ContactForm />} />
           <Route path="/Signup" element={<Signup />} />
           <Route path="/donate_us" element={<Donate_us />} />
+          <Route path="/Adminpage" element={<NgoAdmin/>} />
+          <Route path="/UpdateProfileNGO" element={<UpdateProfileNGO/>} />
+          <Route path="/UploadEvent" element={<UploadEvent/>} />
+          <Route path="/GenerateReq" element={<GenerateReq/>} />
 
           
       </Routes>
