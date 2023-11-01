@@ -42,6 +42,7 @@ const navigate=useNavigate()
                 const data = await response.json();
                 console.log(data)
                 cookie.set("login",true)
+                cookie.set(data.type,true)
                 toast.success('Login Successfully', {
                     position: "top-right",
                     autoClose: 1000,
