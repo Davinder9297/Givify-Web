@@ -40,6 +40,7 @@ function App() {
           <Route path="/UpdateProfileNGO" element={<UpdateProfileNGO/>} />
           <Route path="/UploadEvent" element={<UploadEvent/>} />
           <Route path="/GenerateReq" element={<GenerateReq/>} />
+          <Route path="/NgoAdmin" element={<NgoAdmin/>} />
 
           
       </Routes>

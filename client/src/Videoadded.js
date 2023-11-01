@@ -28,17 +28,18 @@ export default function Videoadded() {
                 <div className='w-[100%] z-0 mt-5 font-p text-4xl mb-3'>Our Events</div>
                 <Events />
                 <Statistics />
-                {/* <div className="flex-col w-[470px] min-h-[260px] h-auto p-3 xsm:w-[100%]">
-            <div className="flex ">
-                <div className='text-xl font-bold w-[90%] xsm:text-2xl'>FAQs </div>
-                <FaQuestionCircle className='ml-1 mt-1 text-xl w-[10%] h-8 flex' />
+                <div className="flex-col w-full h-auto p-3 xsm:w-[100%]">
+            <div className="flex justify-center w-[100%] z-0 mt-4 font-p text-center text-4xl">
+                <div className='w-full xsm:text-2xl '>FAQs </div>
+                <FaQuestionCircle size={40} className='ml-4 mt-1 text-xl text-center mb-0 flex' />
             </div>
-            <div className='text-sm mt-1 xsm:text-xs'>FREQUENTLY ASKED QUESTIONS</div>
+             {/*<div className='text-sm mt-1 xsm:text-xs'>FREQUENTLY ASKED QUESTIONS</div>
             <div className=''><img className='w-40 ml-3' src="hr.png" alt="" /></div>
             <div className="accordion">
-                </div> */}
-            {/* </div> */}
-                {/* <Faq title={title} content={content}/> */}
+        </div> */}
+        <div className=''><Faq/></div>
+        
+            </div>
                 <Footer />
             </div>
         </div>

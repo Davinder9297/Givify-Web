@@ -30,7 +30,7 @@ export default function Statistics() {
 
     return (
         <div className='w-[100%]'>
-            <div className='mt-3 font-p text-4xl mb-3 '>Our Services</div>
+            <div className='mt-3 font-p text-4xl mb-3 '>Overall Stats</div>
             <div className='h-56 flex bgimg bg-no-repeat bg-cover'>
                 <div className='w-[25%] text-2xl p-3 mt-3'>
                     <FaPeopleGroup size={90} className='border-2 border-solid border-black m-auto p-2 rounded-full'/>
