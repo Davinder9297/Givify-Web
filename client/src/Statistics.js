@@ -30,36 +30,36 @@ export default function Statistics() {
 
     return (
         <div className='w-[100%]'>
-            <div className='mt-3 font-p text-4xl mb-3 '>Our Services</div>
+            <div className='mt-3 font-p text-4xl mb-3 xsm:text-xl xsm:font-semibold xsm:mt-1'>Our Services</div>
             <div className='h-56 flex bgimg bg-no-repeat bg-cover'>
-                <div className='w-[25%] text-2xl p-3 mt-3'>
-                    <FaPeopleGroup size={90} className='border-2 border-solid border-black m-auto p-2 rounded-full'/>
+                <div className='w-[25%] text-2xl p-3 mt-3 xsm:text-xs xsm:p-0'>
+                    <FaPeopleGroup size={90} className='border-2 border-solid border-black m-auto p-2 rounded-full xsm:w-14 xsm:h-14 '/>
                     <div className='mt-3'>Our Members</div>
-                        <div style={{ width: 80}} className='m-auto mt-2 font-bold text-3xl'>
+                        <div style={{ width: 80}} className='m-auto mt-2 font-bold text-3xl xsm:text-base xsm:text-left xsm:mt-0'>
                             <div value={percentage}>{`${percentage}`} </div>
                         </div>
                 </div>
 
-                <div className='w-[25%] text-2xl p-3 mt-3'>
-                    <FaUniversity size={90} className='border-2 border-solid border-black m-auto p-2 rounded-full'/>
+                <div className='w-[25%] text-2xl p-3 mt-3 xsm:text-xs xsm:p-0'>
+                    <FaUniversity size={90} className='border-2 border-solid border-black m-auto p-2 rounded-full xsm:w-14 xsm:h-14'/>
                     <div className='mt-3'>University Associations</div>
-                        <div style={{ width: 80}} className='m-auto mt-2 font-bold text-3xl'>
+                        <div style={{ width: 80}} className='m-auto mt-2 font-bold text-3xl xsm:text-base xsm:text-left'>
                             <div value={percentageuni}>{`${percentageuni}`} </div>
                         </div>
                 </div>
 
-                <div className='w-[25%] text-2xl p-3 mt-3'>
-                    <GiTakeMyMoney size={90} className='border-2 border-solid border-black m-auto p-2 rounded-full'/>
+                <div className='w-[25%] text-2xl p-3 mt-3 xsm:text-xs'>
+                    <GiTakeMyMoney size={90} className='border-2 border-solid border-black m-auto p-2 rounded-full xsm:w-14 xsm:h-14'/>
                     <div className='mt-3'>Donations Received</div>
-                        <div style={{ width: 80}} className='m-auto mt-2 font-bold text-3xl'>
-                            <div value={percentagedon} className="text-center">{`${percentagedon}`} </div>
+                        <div style={{ width: 80}} className='m-auto mt-2 font-bold text-3xl xsm:text-base xsm:text-left'>
+                            <div value={percentagedon} className=" xsm:text-left">{`${percentagedon}`} </div>
                         </div>
                 </div>
 
-                <div className='w-[25%] text-2xl p-3 mt-3'>
-                    <GoCodeOfConduct size={90} className='border-2 border-solid border-black m-auto p-2 rounded-full'/>
+                <div className='w-[25%] text-2xl p-3 mt-3 xsm:text-xs'>
+                    <GoCodeOfConduct size={90} className='border-2 border-solid border-black m-auto p-2 rounded-full xsm:w-14 xsm:h-14'/>
                     <div className='mt-3'>Drives Conducted</div>
-                        <div style={{ width: 80}} className='m-auto mt-2 font-bold text-3xl'>
+                        <div style={{ width: 80}} className='m-auto mt-2 font-bold text-3xl xsm:text-base xsm:text-left'>
                             <div value={percentagedrives}>{`${percentagedrives}`} </div>
                         </div>
                 </div>

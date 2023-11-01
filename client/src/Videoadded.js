@@ -9,23 +9,23 @@ import Faq from './Faq';
 export default function Videoadded() {
     return (
 
-        <div className='w-[100%] min-h-[60vh] h-[60vh] relative z-10 '>
-            <video className='' autoPlay={true} muted loop>
+        <div className='w-[100%] min-h-[60vh] h-[60vh] relative z-10'>
+            <video className=' ' autoPlay={true} muted loop>
                 {/* <source src="https://www.kapwing.com/videos/6523ad13f66e2f63957aefd7" type="video/mp4"/> */}
                 <source src="/mainvideo.mp4" type="video/mp4" />
 
             </video>
             {/* <img width='100%' height='20%' src="/mainvideo.gif" alt="" /> */}
-            <div className='floattextclass absolute italic top-32 z-10 w-[75%] mx-auto flex justify-self-center left-40 text-white'>
+            <div className='floattextclass absolute italic top-32 z-10 w-[75%] mx-auto flex justify-self-center left-40 text-white xsm:top-10 xsm:z-10 xsm:w-[55%] xsm:text-sm '>
                 <FloatingText text="An Initiative by Everyone... for Everyone..." className='' delay={200} infinite />
             </div>
-                <div className='w-[100%] z-0 mt-5 font-p text-4xl'>
+                <div className='w-[100%] z-0 mt-5 font-p text-4xl xsm:mt-1 xsm:text-xl '>
                     Different Services Provided by Us
             </div>
 
-            <div className='w-[100%] mt-2'>
+            <div className='w-[100%] mt-2 '>
                 <OurServices />
-                <div className='w-[100%] z-0 mt-5 font-p text-4xl mb-3'>Our Events</div>
+                <div className='w-[100%] z-0 mt-5 font-p text-4xl mb-3 xsm:text-2xl'>Our Events</div>
                 <Events />
                 <Statistics />
                 {/* <div className="flex-col w-[470px] min-h-[260px] h-auto p-3 xsm:w-[100%]">
