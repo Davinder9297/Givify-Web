@@ -61,6 +61,7 @@ export default function Signup() {
             if (response.ok) {
                 // const data = await response.json();
                 cookie.set("login",true)
+                cookie.set(type,true)
                 toast.success('Account Created Successfully', {
                     position: "top-right",
                     autoClose: 1000,
