@@ -11,7 +11,7 @@ export default function Donate_us() {
   let navigate=useNavigate()
   
   useEffect(() => {
-    const url = "http://localhost:5000/signup";
+    const url = "http://localhost:5000/signPunjab";
     // const url1 = "http://localhost:3000/api/placementevents";
 
 
@@ -65,14 +65,14 @@ export default function Donate_us() {
           <div className='flex-col space-y-2'>
 
             <div className=' text-white flex-col w-full space-y-3'>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black bg-fixed text-xl font-medium " value='punjab'>Punjab</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='haryana'>Haryana</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='chandigarh'>Chandigarh</button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black bg-fixed text-xl font-medium " value='Assam'>Assam</button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Bihar'>Bihar</button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Chandigarh'>Chandigarh</button> </div></div>
               <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='delhi'>Delhi</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='rajasthan'> Rajasthan</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='gujrat'> Gujrat</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='up'>UP</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='jammu'>Jammu </button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Goa'> Goa</button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Gujarat'> Gujarat</button> </div></div>
+              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Punjab'>Punjab</button> </div></div>
+              {/* <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Chandigarh'>Chandigarh </button> </div></div> */}
 
 
 

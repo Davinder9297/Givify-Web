@@ -168,21 +168,21 @@ export default function UpdateProfileNGO() {
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
                                         <li><Button className="dropdown-item py-0" value={'Delhi'} onClick={handleeve}>Delhi</Button></li>
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Daman & Diu'} onClick={handleeve}>Daman & Diu</Button></li>
+                                        <li><Button className="dropdown-item py-0" value={'Goa'} onClick={handleeve}>Goa</Button></li>
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Uttar Pradesh'} onClick={handleeve}>Uttar Pradesh</Button></li>
+                                        <li><Button className="dropdown-item py-0" value={'Gujarat'} onClick={handleeve}>Gujarat</Button></li>
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
                                         <li><Button className="dropdown-item py-0" value={'Punjab'} onClick={handleeve}>Punjab</Button></li>
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Andhra Pradesh'} onClick={handleeve}>Chandigarh</Button></li>
+                                        {/* <li><Button className="dropdown-item py-0" value={'Andhra Pradesh'} onClick={handleeve}>Chandigarh</Button></li> */}
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Kerela'} onClick={handleeve}>Kerela</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
+                                        {/* <li><Button className="dropdown-item py-0" value={'Kerela'} onClick={handleeve}>Kerela</Button></li> */}
+                                        {/* <li><hr className="dropdown-divider py-0" /></li>
                                         <li><Button className="dropdown-item py-0" value={'Tamil Nadu'} onClick={handleeve}>Tamil Nadu</Button></li>
+                                        {/* <li><hr className="dropdown-divider py-0" /></li>
+                                        <li><Button className="dropdown-item py-0" value={'Haryana'} onClick={handleeve}>Haryana</Button></li> */}
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Haryana'} onClick={handleeve}>Haryana</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Goa'} onClick={handleeve}>Goa</Button></li>
+                                        {/* <li><Button className="dropdown-item py-0" value={'Goa'} onClick={handleeve}>Goa</Button></li> */}
                                     </ul>
                                 </div>
                             </div>
