@@ -33,11 +33,12 @@ app.post('/contact', async(req, res) => {
 
 });
 app.post('/profile', async(req, res) => {
-    let formdata=req.body;
-    let username=req.cookies.username;
-    let data=await signup.findOneAndUpdate({username:username},{formdata});
-    await data.save();
-    res.json({ message: 'details sent successfully'}).status(200);
+    // let formdata=req.body;
+    // let username=formdata.username;
+    // // console.log(req.cookies)
+    // let data=await signup.findOneAndUpdate({username:username},{email:formdata.email});
+    // await data.save();
+    // res.json({ message: 'details sent successfully'}).status(200);
 
 
 
