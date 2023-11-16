@@ -175,21 +175,21 @@ setimage(res2.url)
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
                                         <li><Button className="dropdown-item py-0" value={'Daman & Diu'} onClick={handlestate}>Daman & Diu</Button></li>
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Daman & Diu'} onClick={handleeve}>Daman & Diu</Button></li>
+                                        <li><Button className="dropdown-item py-0" value={'Daman & Diu'} onClick={handlestate}>Daman & Diu</Button></li>
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
                                         <li><Button className="dropdown-item py-0" value={'Punjab'} onClick={handlestate}>Punjab</Button></li>
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
                                         <li><Button className="dropdown-item py-0" value={'Andhra Pradesh'} onClick={handlestate}>Chandigarh</Button></li>
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Andhra Pradesh'} onClick={handleeve}>Chandigarh</Button></li>
+                                        <li><Button className="dropdown-item py-0" value={'Andhra Pradesh'} onClick={handlestate}>Chandigarh</Button></li>
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Kerela'} onClick={handleeve}>Kerela</Button></li>
+                                        <li><Button className="dropdown-item py-0" value={'Kerela'} onClick={handlestate}>Kerela</Button></li>
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Tamil Nadu'} onClick={handleeve}>Tamil Nadu</Button></li>
+                                        <li><Button className="dropdown-item py-0" value={'Tamil Nadu'} onClick={handlestate}>Tamil Nadu</Button></li>
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Haryana'} onClick={handleeve}>Haryana</Button></li>
+                                        <li><Button className="dropdown-item py-0" value={'Haryana'} onClick={handlestate}>Haryana</Button></li>
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Goa'} onClick={handleeve}>Goa</Button></li>
+                                        <li><Button className="dropdown-item py-0" value={'Goa'} onClick={handlestate}>Goa</Button></li>
                                     </ul>
                                 </div>
                             </div>
