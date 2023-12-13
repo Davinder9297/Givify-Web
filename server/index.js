@@ -5,6 +5,7 @@ const mongoose=require('mongoose');
 const contact = require('./models/contact');
 const signup = require('./models/signup');
 const gallery = require('./models/gallery');
+const requirements = require('./models/requirements');
 
 mongoose.set("strictQuery", false);
 mongoose.connect("mongodb+srv://davinder:davinder@cluster0.ed9lgev.mongodb.net/");
@@ -80,6 +81,22 @@ app.get('/gallery', async(req, res) => {
 
     let data=await gallery.find({});
     res.json(data).status(200);
+
+
+});
+app.post('/gallery', async(req, res) => {
+
+    let data=new gallery(req.body);
+    await data.save();
+    res.json({ message: 'details sent successfully'}).status(200);
+
+
+});
+app.post('/requirements', async(req, res) => {
+
+    let data=new requirements(req.body);
+    await data.save();
+    res.json({ message: 'details sent successfully'}).status(200);
 
 
 });

@@ -49,7 +49,7 @@ setimage(res2.url)
                 toast.warning('Every input must be filled', {
                     position: "top-right",
                     autoClose: 1000,
-                    hideProgressBar: false,
+                    hideProgressBar: false ,
                     closeOnClick: true,
                     pauseOnHover: true,
                     draggable: true,

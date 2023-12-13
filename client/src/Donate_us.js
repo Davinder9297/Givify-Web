@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 export default function Donate_us() {
   const [data, setdata] = useState([])
+  const [totaldata, settotaldata] = useState([])
   // let cookie=new Cookies()
   let navigate=useNavigate()
   
@@ -22,7 +23,7 @@ export default function Donate_us() {
         let json = await response.json();
         console.log(json);
         setdata(json)
-
+        settotaldata(json)
       } catch (error) {
         // setshow('hidden')
         // setspin('')
@@ -35,18 +36,18 @@ export default function Donate_us() {
   const showresult = (e) => {
     e.preventDefault()
     // data.map((curr)=>{
+if(e.target.value=='All'){
+setdata(totaldata)
+}
+else{
+  let temp = data.filter((currelem) => {
 
-    let temp = data.filter((currelem) => {
+    return currelem.location == e.target.value;
+  })
 
-      return currelem.state == e.target.value;
-    })
-    // if (temp.length == 0) {
-    //   setnorecord('')
-    // }
-    // else {
-    //   setnorecord('hidden')
-    // }
-    setdata(temp)
+  setdata(temp)
+}
+  
 
 
   }
@@ -57,7 +58,7 @@ export default function Donate_us() {
       <div className=" py-3 px-3 flex-col h-[100vh] w-[20%] border-l-2 border-black  bg-slate-800 text-black   xsm:hidden">
 
 
-        <div className=" w-full mt-8 h-8 items-center">
+        <div className=" w-full mt-1 h-8 items-center">
           <div className=" text-2xl text-center font-bold text-white">Filter Locations</div>
         </div>
 
@@ -65,16 +66,15 @@ export default function Donate_us() {
           <div className='flex-col space-y-2'>
 
             <div className=' text-white flex-col w-full space-y-3'>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black bg-fixed text-xl font-medium " value='Assam'>Assam</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Bihar'>Bihar</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Chandigarh'>Chandigarh</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='delhi'>Delhi</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Goa'> Goa</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Gujarat'> Gujarat</button> </div></div>
-              <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Punjab'>Punjab</button> </div></div>
-              {/* <div className="flex justify-center " ><div><button className="h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Chandigarh'>Chandigarh </button> </div></div> */}
-
-
+              <div className="flex justify-center " ><div><button onClick={showresult} className="shadow-lg shadow-white h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black bg-fixed text-xl font-medium " value='All'>All</button> </div></div>
+              <div className="flex justify-center " ><div><button onClick={showresult} className="shadow-lg shadow-white h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black bg-fixed text-xl font-medium " value='Assam'>Assam</button> </div></div>
+              <div className="flex justify-center " ><div><button onClick={showresult} className="shadow-lg shadow-white h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Bihar'>Bihar</button> </div></div>
+              <div className="flex justify-center " ><div><button onClick={showresult} className="shadow-lg shadow-white h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Chandigarh'>Chandigarh</button> </div></div>
+              <div className="flex justify-center " ><div><button onClick={showresult} className="shadow-lg shadow-white h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='delhi'>Delhi</button> </div></div>
+              <div className="flex justify-center " ><div><button onClick={showresult} className="shadow-lg shadow-white h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Goa'> Goa</button> </div></div>
+              <div className="flex justify-center " ><div><button onClick={showresult} className="shadow-lg shadow-white h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Gujarat'> Gujarat</button> </div></div>
+              <div className="flex justify-center " ><div><button onClick={showresult} className="shadow-lg shadow-white h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Punjab'>Punjab</button> </div></div>
+              {/* <div className="flex justify-center " ><div><button onClick={showresult} className="shadow-lg shadow-white h-10 w-36 text-center text-white px-3 pt-3 pb-10 rounded-md hover:bg-violet-200 hover:text-black text-xl font-medium " value='Chandigarh'>Chandigarh </button> </div></div> */}
 
             </div>
           </div>

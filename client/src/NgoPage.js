@@ -57,7 +57,7 @@ setalldata(data)
 
 
                     {/* RHS */}
-                    <div className="w-[68%] ">
+                    <div className="w-[68%] h-[81vh] scrollbar-thin scrollbar-track-slate-200 scrollbar-thumb-slate-400 overflow-y-auto ">
                         <div className="w-[98%] m-auto flex h-[170px] justify-between mb-5">
                             <div className="w-[24%] rounded-md shadow-md shadow-gray-400">
                                 <div className='m-auto p-2 '>
@@ -92,20 +92,54 @@ setalldata(data)
                                 </div>
                             </div>
                         </div>
-                        <div className="w-[98%] m-auto flex h-[170px] mb-2 justify-between">
-                            <div className="w-[24%] rounded-md shadow-md shadow-gray-400">
-                                <img src="donate1.png" className="h-full w-full" alt="" />
+                        <div className='font-semibold text-3xl font-p mb-3'>Our Requirements</div>
+
+                        <div className=" flex h-auto  justify-around flex-wrap ">
+                         <div className="flex-col border-2 w-[320px] shadow-xl rounded-lg  hover:scale-95 transition duration-100 ease-in xsm:h-auto">
+                            <div className=""><img className="rounded-t w-[350px] m-auto h-48 xsm:h-44" src="img1.png" alt="" /></div>
+                            <div className="flex justify-between">
+                                 <div className="bgimg bg-no-repeat text-black px-1 mt-1 text-xs py-1 rounded-tr rounded-br">Category</div>
+                                <div className="bgimg  mt-1 text-xs px-1 py-1 rounded-tl rounded-bl">Date</div>
                             </div>
-                            <div className="w-[24%] rounded-md shadow-md shadow-gray-400">
-                                <img src="img2.png" className="h-full w-full" alt="" />
+                <div className="px-1 mt-1 font-bold text-center xsm:text-sm">Title</div>
+                <div className="px-2 xsm:text-xs mt-1 text-justify text-sm ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora distinctio sit cum fuga consequuntur ex fugit hic, consequatur ut, labore beatae. Officiis magni, corrupti autmpora distinctio sit cum fuga consequuntur ex mpora distinctio sit </div>
+                <div><button className='mt-1 py-1 w-[90%] bgimg bg-no-repeat bg-cover rounded-md hover:bg-red-600 hover:text-white'>Donate Now</button></div>
+            </div>
+
+                         <div className="flex-col  border-2 w-[320px] shadow-xl rounded-lg  hover:scale-95 transition duration-100 ease-in xsm:h-auto">
+                            <div className=""><img className="rounded-t w-[350px] m-auto h-48 xsm:h-44" src="img1.png" alt="" /></div>
+                            <div className="flex justify-between">
+                                 <div className="bgimg bg-no-repeat text-black px-1 mt-1 text-xs py-1 rounded-tr rounded-br">Category</div>
+                                <div className="bgimg  mt-1 text-xs px-1 py-1 rounded-tl rounded-bl">Date</div>
                             </div>
-                            <div className="w-[24%] rounded-md shadow-md shadow-gray-400">
-                                <img src="img1.png" className="h-full w-full" alt="" />
+                <div className="px-1 mt-1 font-bold text-center xsm:text-sm">Title</div>
+                <div className="px-2 xsm:text-xs mt-1 text-justify text-sm ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora distinctio sit cum fuga consequuntur ex fugit hic, consequatur ut, labore beatae. Officiis magni, corrupti autmpora distinctio sit cum fuga consequuntur ex mpora distinctio sit </div>
+                <div><button className='mt-1 py-1 w-[90%] bgimg bg-no-repeat bg-cover rounded-md hover:bg-red-600 hover:text-white'>Donate Now</button></div>
+            </div>
+                         <div className="flex-col border-2 w-[320px] shadow-xl rounded-lg  hover:scale-95 transition duration-100 ease-in xsm:h-auto">
+                            <div className=""><img className="rounded-t w-[350px] m-auto h-48 xsm:h-44" src="img1.png" alt="" /></div>
+                            <div className="flex justify-between">
+                                 <div className="bgimg bg-no-repeat text-black px-1 mt-1 text-xs py-1 rounded-tr rounded-br">Category</div>
+                                <div className="bgimg  mt-1 text-xs px-1 py-1 rounded-tl rounded-bl">Date</div>
                             </div>
-                            <div className="w-[24%] rounded-md shadow-md shadow-gray-400">
-                                <img src="img3.png" className="h-full w-full" alt="" />
+                <div className="px-1 mt-1 font-bold text-center xsm:text-sm">Title</div>
+                <div className="px-2 xsm:text-xs mt-1 text-justify text-sm ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora distinctio sit cum fuga consequuntur ex fugit hic, consequatur ut, labore beatae. Officiis magni, corrupti autmpora distinctio sit cum fuga consequuntur ex mpora distinctio sit </div>
+                <div><button className='mt-1 py-1 w-[90%] bgimg bg-no-repeat bg-cover rounded-md hover:bg-red-600 hover:text-white'>Donate Now</button></div>
+            </div>
+                         <div className="flex-col border-2 w-[320px] shadow-xl rounded-lg  hover:scale-95 transition duration-100 ease-in xsm:h-auto">
+                            <div className=""><img className="rounded-t w-[350px] m-auto h-48 xsm:h-44" src="img1.png" alt="" /></div>
+                            <div className="flex justify-between">
+                                 <div className="bgimg bg-no-repeat text-black px-1 mt-1 text-xs py-1 rounded-tr rounded-br">Category</div>
+                                <div className="bgimg  mt-1 text-xs px-1 py-1 rounded-tl rounded-bl">Date</div>
                             </div>
-                        </div>
+                <div className="px-1 mt-1 font-bold text-center xsm:text-sm">Title</div>
+                <div className="px-2 xsm:text-xs mt-1 text-justify text-sm ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora distinctio sit cum fuga consequuntur ex fugit hic, consequatur ut, labore beatae. Officiis magni, corrupti autmpora distinctio sit cum fuga consequuntur ex mpora distinctio sit </div>
+                <div><button className='mt-1 py-1 w-[90%] bgimg bg-no-repeat bg-cover rounded-md hover:bg-red-600 hover:text-white'>Donate Now</button></div>
+            </div>
+                
+                
+                </div>
+                   
                     </div>
 
                 </div>

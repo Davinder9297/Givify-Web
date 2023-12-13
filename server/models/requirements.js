@@ -6,12 +6,6 @@ const ourschema=new mongoose.Schema({
     username:{
         type:String
     },
-    organizationname:{
-        type:String
-    },
-    doc:{
-        type:String
-    },
     description:{
         type:String
     },
@@ -25,5 +19,5 @@ const ourschema=new mongoose.Schema({
     
    
 });
-const signup=new mongoose.model("gallery",ourschema)
-module.exports=signup;
+const requirements=new mongoose.model("requirements",ourschema)
+module.exports=requirements;
