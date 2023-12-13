@@ -39,6 +39,7 @@ const navigate=useNavigate()
                 body: JSON.stringify(formData),
             });
             if (response.ok) {
+
                 const data = await response.json();
                 // console.log(data)
                 cookie.set("login",true)
@@ -54,7 +55,7 @@ const navigate=useNavigate()
                     progress: undefined,
     
                 });    
-                navigate('/')         
+                navigate('/Adminpage')         
             } else {              
                 toast.warning('Invaild Credentials', {
                     position: "top-right",

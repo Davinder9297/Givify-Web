@@ -33,12 +33,21 @@ app.post('/contact', async(req, res) => {
 
 });
 app.post('/profile', async(req, res) => {
+<<<<<<< HEAD
     let formdata=req.body;
     console.log(req)
     // let username=req.cookies.username;
     // let data=await signup.findOneAndUpdate({username:username},{formdata});
     // await data.save();
     res.json({ message: 'details sent successfully'}).status(200);
+=======
+    // let formdata=req.body;
+    // let username=formdata.username;
+    // // console.log(req.cookies)
+    // let data=await signup.findOneAndUpdate({username:username},{email:formdata.email});
+    // await data.save();
+    // res.json({ message: 'details sent successfully'}).status(200);
+>>>>>>> bd677b4d0d86f7ced22f28e110063406cd47a649
 
 
 
