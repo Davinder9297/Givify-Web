@@ -162,19 +162,6 @@ setimage(res2.url)
                                     State :
                                 </div>
                                 <div className="btn-group ml-20">
-<<<<<<< HEAD
-                                <select name="state" value={state} onChange={(e) => { setstate(e.target.value) }} className=" outline cursor-pointer outline-1 px-2 rounded-sm py-[4px] w-full text-base text-gray-400 outline-gray-300 mt-1">
-                                <option className="" value="">--SELECT--</option >
-                                <option className="" value="Assam">Assam</option >
-                                <option className="" value="Bihar">Bihar</option >
-                                <option className="" value="Chandigarh">Chandigarh</option >
-                                <option className="" value="Delhi">Delhi</option >
-                                <option className="" value="Goa">Goa</option >
-                                <option className="" value="Gujarat">Gujarat</option >
-                                <option className="" value="Punjab">Punjab</option >
-                            </select>
-                                   
-=======
                                     <button type="button" className="btn btn-light dropdown-toggle w-48 shadow-none p-0 ml-10" data-bs-toggle="dropdown" aria-expanded="false">
                                         {state}
                                     </button>
@@ -196,7 +183,6 @@ setimage(res2.url)
                                         {/* <li><hr className="dropdown-divider py-0" /></li> */}
 
                                     </ul>
->>>>>>> bd677b4d0d86f7ced22f28e110063406cd47a649
                                 </div>
                             </div>
                         <div>
