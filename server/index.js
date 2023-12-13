@@ -5,6 +5,7 @@ const mongoose=require('mongoose');
 const contact = require('./models/contact');
 const signup = require('./models/signup');
 const gallery = require('./models/gallery');
+const requirements = require('./models/requirements');
 
 mongoose.set("strictQuery", false);
 mongoose.connect("mongodb+srv://davinder:davinder@cluster0.ed9lgev.mongodb.net/");
@@ -32,25 +33,16 @@ app.post('/contact', async(req, res) => {
 
 
 });
+
 app.post('/profile', async(req, res) => {
-<<<<<<< HEAD
-    let formdata=req.body;
-    console.log(req)
-    // let username=req.cookies.username;
-    // let data=await signup.findOneAndUpdate({username:username},{formdata});
-    // await data.save();
+    let {image,email,contact,state,location,description,children,members}=req.body;
+    let username=req.body.username;
+    // console.log(username)
+    let data=await signup.findOneAndUpdate({username:username},{image,email,contact,state,location,description,children,members},{returnNewDocument:true});
+    // console.log(data)
+    await data.save();
+ 
     res.json({ message: 'details sent successfully'}).status(200);
-=======
-    // let formdata=req.body;
-    // let username=formdata.username;
-    // // console.log(req.cookies)
-    // let data=await signup.findOneAndUpdate({username:username},{email:formdata.email});
-    // await data.save();
-    // res.json({ message: 'details sent successfully'}).status(200);
->>>>>>> bd677b4d0d86f7ced22f28e110063406cd47a649
-
-
-
 });
 app.post('/login', async(req, res) => {
     // let formdata=req.body;
@@ -69,9 +61,15 @@ app.get('/signup', async(req, res) => {
 
 
 });
+app.post('/profiledata', async(req, res) => {
+ 
+    
+
+
+});
 app.post('/singlepage', async(req, res) => {
 let id=req.body.id;
-console.log(id)
+// console.log(id)
     let data=await signup.findById({_id:id});
     // console.log(req)
     res.json(data).status(200);
@@ -83,6 +81,22 @@ app.get('/gallery', async(req, res) => {
 
     let data=await gallery.find({});
     res.json(data).status(200);
+
+
+});
+app.post('/gallery', async(req, res) => {
+
+    let data=new gallery(req.body);
+    await data.save();
+    res.json({ message: 'details sent successfully'}).status(200);
+
+
+});
+app.post('/requirements', async(req, res) => {
+
+    let data=new requirements(req.body);
+    await data.save();
+    res.json({ message: 'details sent successfully'}).status(200);
 
 
 });
