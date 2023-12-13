@@ -11,7 +11,7 @@ export default function Donate_us() {
   let navigate=useNavigate()
   
   useEffect(() => {
-    const url = "http://localhost:5000/signPunjab";
+    const url = "http://localhost:5000/signup";
     // const url1 = "http://localhost:3000/api/placementevents";
 
 
@@ -54,14 +54,14 @@ export default function Donate_us() {
     {/* <Header/> */}
     <div className=" mt-2 p-2 flex flex-row w-full h-auto overflow-y-hidden ">
 
-      <div className=" py-3 px-3 flex-col h-[100vh] w-[20%] border-l-2 border-black scrollbar-thin scrollbar-track-slate-200 scrollbar-thumb-slate-400 bg-slate-800 text-black  overflow-y-scroll overflow-x-auto xsm:hidden">
+      <div className=" py-3 px-3 flex-col h-[100vh] w-[20%] border-l-2 border-black  bg-slate-800 text-black   xsm:hidden">
 
 
         <div className=" w-full mt-8 h-8 items-center">
           <div className=" text-2xl text-center font-bold text-white">Filter Locations</div>
         </div>
 
-        <div className=' mt-8 '>
+        <div className=' mt-2 '>
           <div className='flex-col space-y-2'>
 
             <div className=' text-white flex-col w-full space-y-3'>
@@ -86,14 +86,14 @@ export default function Donate_us() {
       <div className="  w-[80%]  bg-zinc-100 border-b-4 ">
         <div className=" pt-12 text-center text-3xl font-serif font-semibold">Showing Filtered locations </div>
 
-        <div className=" mt-10 px-4 flex flex-row justify-center space-x-10">
+        <div className="h-[440px] mt-10 px-4 flex flex-row flex-wrap justify-around  scrollbar-thin scrollbar-track-slate-200 scrollbar-thumb-slate-400  text-black  overflow-y-auto ">
           {data.map((da) => {
             return (
               <div className="flex-col h-[380px] w-[300px] rounded-lg mb-5 shadow-2xl hover:scale-95 transition duration-300 ease-in ">
                 <div className=" flex justify-center"><img className=" w-52 h-48 mt-2" src="work1.png" alt="" /></div>
-                <div className="px-1 mt-4 text-lg font-bold">NGO NAME</div>
-                <div className="px-1 text-sm">We are an organisation which is working for the well-being of the society and its people.</div>
-            <div className='mt-5'>  <Link to='/NgoPage'  className='bg-cyan-100 w-full no-underline  rounded-md py-1 px-[120px]'>
+                <div className="px-1 mt-4 text-lg font-bold">{da.organizationname}</div>
+               {da.description? <div className="px-1 text-sm">{da.description}</div>:<div className="px-1 text-sm">We are an organisation which is working for the well-being of the society and its people.</div>}
+            <div className='mt-5'>  <Link to={`/NgoPage?id=${da._id}`}  className='bg-cyan-100 w-full no-underline  rounded-md py-1 px-[120px]'>
                   View
                 </Link></div>
             </div>

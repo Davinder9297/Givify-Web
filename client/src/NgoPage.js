@@ -1,10 +1,44 @@
 
+import { useEffect, useState } from 'react';
 import { MdPeopleAlt } from 'react-icons/md'
+import { useSearchParams } from 'react-router-dom';
 export default function NgoPage() {
+    const [searchParams, setSearchParams] = useSearchParams()
+const [alldata, setalldata] = useState([])
+    useEffect(() => {
+
+    
+        const fetchData = async () => {
+          try {
+    // console.log(searchParams.get('id'))
+    let id=searchParams.get('id')
+   
+            const response = await fetch('http://localhost:5000/singlepage', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({id}),
+            });
+    // console.log(response)
+    if(response.ok){
+        const data=await response.json()
+        console.log(data)
+setalldata(data)
+    }
+    
+          } catch (error) {
+ 
+            console.log("error", error);
+          }
+        };
+    
+        fetchData();
+      }, []);
     return (<>
         <div className=" flex justify-around mt-2">
             <div className="w-full mt-3">
-                <div className="text-4xl">Non Governmental Organization 1</div>
+                <div className="text-4xl">{alldata.organizationname}</div>
                 {/* main box for content */}
                 <div className="mt-4 flex justify-between">
                     {/* LHS */}
@@ -13,10 +47,10 @@ export default function NgoPage() {
                             <img src="/img1.png" alt='uni' height={40} width='100%' className="shadow-md shadow-gray-400" />
                         </div>
                         <div className="mt-4 text-left p-3">
-                            <div>E-mail Address :</div>
+                            <div>E-mail Address : {alldata.email}</div>
                             <div>Joining Date : 23.11.2002</div>
-                            <div className="">Description : <div className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore dolorem ipsam veritatis. Optio itaque quam dolor architecto facilis veniam tempore? Blanditiis hic repellendus consequatur exercitationem nihil, molestias, quia voluptates iure, quos modi aperiam atque harum.</div></div>
-                            <div>Location : </div>
+                            <div className="">Description : <div className="text-sm">{alldata.description}</div></div>
+                            <div>Location : {alldata.location}</div>
                         </div>
 
                     </div>

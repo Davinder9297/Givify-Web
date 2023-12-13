@@ -40,7 +40,7 @@ const navigate=useNavigate()
             });
             if (response.ok) {
                 const data = await response.json();
-                console.log(data)
+                // console.log(data)
                 cookie.set("login",true)
                 cookie.set(data.type,true)
                 cookie.set('username',username)

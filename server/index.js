@@ -34,9 +34,10 @@ app.post('/contact', async(req, res) => {
 });
 app.post('/profile', async(req, res) => {
     let formdata=req.body;
-    let username=req.cookies.username;
-    let data=await signup.findOneAndUpdate({username:username},{formdata});
-    await data.save();
+    console.log(req)
+    // let username=req.cookies.username;
+    // let data=await signup.findOneAndUpdate({username:username},{formdata});
+    // await data.save();
     res.json({ message: 'details sent successfully'}).status(200);
 
 
@@ -59,6 +60,16 @@ app.get('/signup', async(req, res) => {
 
 
 });
+app.post('/singlepage', async(req, res) => {
+let id=req.body.id;
+console.log(id)
+    let data=await signup.findById({_id:id});
+    // console.log(req)
+    res.json(data).status(200);
+
+
+});    
+
 app.get('/gallery', async(req, res) => {
 
     let data=await gallery.find({});

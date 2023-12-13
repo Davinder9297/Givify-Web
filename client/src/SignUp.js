@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BiLogIn } from 'react-icons/bi'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import {cookie} from 'react-cookie'
@@ -14,6 +14,8 @@ export default function Signup() {
    const [spin, setspin] = useState('hidden')
    const [content, setcontent] = useState('py-[6px]')
    const cookie=new Cookies();
+   const navigate=useNavigate()
+
     const handleSignup = async (e) => {
         e.preventDefault();
         setcontent('hidden')
@@ -62,6 +64,7 @@ export default function Signup() {
                 // const data = await response.json();
                 cookie.set("login",true)
                 cookie.set(type,true)
+                cookie.set('username',username)
                 toast.success('Account Created Successfully', {
                     position: "top-right",
                     autoClose: 1000,
@@ -74,7 +77,7 @@ export default function Signup() {
                 });
                 setcontent('py-[6px]')
                 setspin('hidden')
-                // alert(data.message);
+               navigate('/NgoAdmin')
             } else {
                 setcontent('py-[6px]')
                 setspin('hidden')

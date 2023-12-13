@@ -29,7 +29,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home/>}/>
       
-          <Route path="/Ngo_page" element={<NgoPage />} />
+          <Route path="/NgoPage" element={<NgoPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About_us />} />
           <Route path="/gallery" element={<Gallery />} />

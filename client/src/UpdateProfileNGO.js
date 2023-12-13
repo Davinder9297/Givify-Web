@@ -161,36 +161,17 @@ setimage(res2.url)
                                     State :
                                 </div>
                                 <div className="btn-group ml-20">
-                                    <button type="button" className="btn btn-light dropdown-toggle w-48 shadow-none p-0 ml-10" data-bs-toggle="dropdown" aria-expanded="false">
-                                        {state}
-                                    </button>
-                                    <ul className="dropdown-menu">
-                                        <li><Button className="dropdown-item py-0" value={'Assam'} onClick={handlestate}>Assam</Button></li>
-                                        <li><hr className="dropdown-divider py-0" /></li>
-                                        <li><Button className="dropdown-item py-0" value={'Bihar'} onClick={handlestate}>Bihar</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Chandigarh'} onClick={handlestate}>Chandigarh</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Delhi'} onClick={handlestate}>Delhi</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Daman & Diu'} onClick={handlestate}>Daman & Diu</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Daman & Diu'} onClick={handlestate}>Daman & Diu</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Punjab'} onClick={handlestate}>Punjab</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Andhra Pradesh'} onClick={handlestate}>Chandigarh</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Andhra Pradesh'} onClick={handlestate}>Chandigarh</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Kerela'} onClick={handlestate}>Kerela</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Tamil Nadu'} onClick={handlestate}>Tamil Nadu</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Haryana'} onClick={handlestate}>Haryana</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Goa'} onClick={handlestate}>Goa</Button></li>
-                                    </ul>
+                                <select name="state" value={state} onChange={(e) => { setstate(e.target.value) }} className=" outline cursor-pointer outline-1 px-2 rounded-sm py-[4px] w-full text-base text-gray-400 outline-gray-300 mt-1">
+                                <option className="" value="">--SELECT--</option >
+                                <option className="" value="Assam">Assam</option >
+                                <option className="" value="Bihar">Bihar</option >
+                                <option className="" value="Chandigarh">Chandigarh</option >
+                                <option className="" value="Delhi">Delhi</option >
+                                <option className="" value="Goa">Goa</option >
+                                <option className="" value="Gujarat">Gujarat</option >
+                                <option className="" value="Punjab">Punjab</option >
+                            </select>
+                                   
                                 </div>
                             </div>
                         <div>
