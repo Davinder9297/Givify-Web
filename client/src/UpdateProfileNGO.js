@@ -20,6 +20,7 @@ export default function UpdateProfileNGO() {
     
 
 let cookies=new Cookies()
+
 const handlestate=(e)=>{
     setstate(e.target.value)
 }
@@ -39,68 +40,68 @@ setimage(res2.url)
     }
     const handlesubmit = async (e) => {
         e.preventDefault();
-    //    const username=cookies.get('username');
-    //     try {
-    //         const formData = { username,image,email,contact,state,location,description,children,members };
-    //         console.log(formData)
-    //         if(image=="" || email=="" ||  contact=="" ||  state=="" ||  location=="" || description=="" || children=="" || members=="" ){
+       const username=cookies.get('username');
+        try {
+            const formData = { username,image,email,contact,state,location,description,children,members };
+            console.log(formData)
+            if(image=="" || email=="" ||  contact=="" ||  state=="" ||  location=="" || description=="" || children=="" || members=="" ){
               
-    //             toast.warning('Every input must be filled', {
-    //                 position: "top-right",
-    //                 autoClose: 1000,
-    //                 hideProgressBar: false,
-    //                 closeOnClick: true,
-    //                 pauseOnHover: true,
-    //                 draggable: true,
-    //                 progress: undefined,
+                toast.warning('Every input must be filled', {
+                    position: "top-right",
+                    autoClose: 1000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
     
-    //             });
-    //         }
+                });
+            }
                
-    //         else{
+            else{
                 
-    //         const response = await fetch('http://localhost:5000/profile', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify(formData),
-    //         });
+            const response = await fetch('http://localhost:5000/profile', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
 
-    //         if (response.ok) {
-    //             // const data = await response.json();
+            if (response.ok) {
+                // const data = await response.json();
                
-    //             toast.success('Details Updated Successfully', {
-    //                 position: "top-right",
-    //                 autoClose: 1000,
-    //                 hideProgressBar: false,
-    //                 closeOnClick: true,
-    //                 pauseOnHover: true,
-    //                 draggable: true,
-    //                 progress: undefined,
+                toast.success('Details Updated Successfully', {
+                    position: "top-right",
+                    autoClose: 1000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
     
-    //             });
+                });
               
-    //             // alert(data.message);
-    //         } 
-    //         }
+                // alert(data.message);
+            } 
+            }
 
         
-    //     } catch (error) {
+        } catch (error) {
     
-    //         toast.warning('Technical issues', {
-    //             position: "top-right",
-    //             autoClose: 1000,
-    //             hideProgressBar: false,
-    //             closeOnClick: true,
-    //             pauseOnHover: true,
-    //             draggable: true,
-    //             progress: undefined,
+            toast.warning('Technical issues', {
+                position: "top-right",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
 
-    //         });
-    //         // console.error('Error:', error);
-    //         // alert('An error occurred while sending the request');
-    //     }
+            });
+            // console.error('Error:', error);
+            // alert('An error occurred while sending the request');
+        }
     };
 
 
@@ -130,7 +131,7 @@ setimage(res2.url)
                             <div className='flex'>
                                 <div>Profile Picture : </div>
                                 <div className='ml-14'>
-                                    <input type='file' onChange={imageupload}  className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
+                                    <input type='file' accept="image/png, image/gif, image/jpeg" onChange={imageupload}  className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
                                 </div>
                             </div>
                             <div className='flex'>
@@ -162,7 +163,6 @@ setimage(res2.url)
                                     State :
                                 </div>
                                 <div className="btn-group ml-20">
-<<<<<<< HEAD
                                 <select name="state" value={state} onChange={(e) => { setstate(e.target.value) }} className=" outline cursor-pointer outline-1 px-2 rounded-sm py-[4px] w-full text-base text-gray-400 outline-gray-300 mt-1">
                                 <option className="" value="">--SELECT--</option >
                                 <option className="" value="Assam">Assam</option >
@@ -174,29 +174,6 @@ setimage(res2.url)
                                 <option className="" value="Punjab">Punjab</option >
                             </select>
                                    
-=======
-                                    <button type="button" className="btn btn-light dropdown-toggle w-48 shadow-none p-0 ml-10" data-bs-toggle="dropdown" aria-expanded="false">
-                                        {state}
-                                    </button>
-                                    <ul className="dropdown-menu">
-                                        <li><Button className="dropdown-item py-0" value={'Assam'} onClick={handlestate}>Assam</Button></li>
-                                        <li><hr className="dropdown-divider py-0" /></li>
-                                        <li><Button className="dropdown-item py-0" value={'Bihar'} onClick={handlestate}>Bihar</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Chandigarh'} onClick={handlestate}>Chandigarh</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Delhi'} onClick={handlestate}>Delhi</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Daman & Diu'} onClick={handlestate}>Daman & Diu</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                    <li><Button className="dropdown-item py-0" value={'Punjab'} onClick={handlestate}>Punjab</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Andhra Pradesh'} onClick={handlestate}>Chandigarh</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-
-                                    </ul>
->>>>>>> bd677b4d0d86f7ced22f28e110063406cd47a649
                                 </div>
                             </div>
                         <div>

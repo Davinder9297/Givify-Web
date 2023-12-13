@@ -23,7 +23,7 @@ const [alldata, setalldata] = useState([])
     // console.log(response)
     if(response.ok){
         const data=await response.json()
-        console.log(data)
+        // console.log(data)
 setalldata(data)
     }
     
@@ -44,11 +44,11 @@ setalldata(data)
                     {/* LHS */}
                     <div className="w-[30%] bgimg bg-cover">
                         <div className="flex justify-center  ">
-                            <img src="/img1.png" alt='uni' height={40} width='100%' className="shadow-md shadow-gray-400" />
+                            <img src={alldata.logo?alldata.logo:'img1.png'} alt='uni' height={40} width='100%' className="shadow-md shadow-gray-400" />
                         </div>
-                        <div className="mt-4 text-left p-3">
-                            <div>E-mail Address : {alldata.email}</div>
-                            <div>Joining Date : 23.11.2002</div>
+                        <div className="mt-4 text-left p-3 font-semibold">
+                            <div className=''>E-mail Address : {alldata.email}</div>
+                            <div>Joining Date : {alldata.date}</div>
                             <div className="">Description : <div className="text-sm">{alldata.description}</div></div>
                             <div>Location : {alldata.location}</div>
                         </div>
