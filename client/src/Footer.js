@@ -20,10 +20,10 @@ export default function Footer() {
                     <button className='text-xl xsm:h-6'><BsLinkedin /></button>
                 </div>
             </div>
-            <div className='flex justify-between w-[30%] xsm:p-5 xsm:!mt-0 xsm:w-full'>
-                <div className='flex-col xsm:hidden'>
-                    <div className='font-semibold text-lg pr-1'>Quick links</div>
-                    <ul className='text-sm space-y-1 mt-1'>
+            <div className='flex justify-between w-[30%] xsm:p-5'>
+                <div className='flex-col xsm:mt-5'>
+                    <div className='font-semibold text-lg pr-1 xsm:ml-6'>Quick links</div>
+                    <ul className='text-sm space-y-1 mt-1 '>
                         <li>Home</li>
                         <li>About</li>
                         <li>Gallery</li>

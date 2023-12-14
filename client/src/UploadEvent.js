@@ -39,7 +39,7 @@ const handledoc=async(evnt)=>{
         })
         const res2=await res.json();
         setdoc(res2.url)
-        // console.log(res2.url)
+        console.log(res2.url)
         setspin('hidden')
         setdisable(false)
         setopac('cursor-pointer')
