@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .App {
   text-align: center;
 }
@@ -5,13 +8,6 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-/* contact form bg  */
-.contact_form-bg{
-  background: url('../public/contact.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 @media (prefers-reduced-motion: no-preference) {
