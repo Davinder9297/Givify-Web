@@ -35,10 +35,10 @@ app.post('/contact', async(req, res) => {
 });
 
 app.post('/profile', async(req, res) => {
-    let {logo,email,phone,state,location,description,children,members}=req.body;
+    let {logo,email,phone,state,location,description,childrens,members}=req.body;
     let username=req.body.username;
     console.log(req.body)
-    let data=await signup.findOneAndUpdate({username:username},{logo,email,phone,state,location,description,children,members},{returnNewDocument:true});
+    let data=await signup.findOneAndUpdate({username:username},{logo,email,phone,state,location,description,childrens,members},{returnNewDocument:true});
     // console.log(data)
     await data.save();
  
