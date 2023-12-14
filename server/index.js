@@ -35,10 +35,10 @@ app.post('/contact', async(req, res) => {
 });
 
 app.post('/profile', async(req, res) => {
-    let {image,email,contact,state,location,description,children,members}=req.body;
+    let {image,email,phone,state,location,description,children,members}=req.body;
     let username=req.body.username;
-    // console.log(username)
-    let data=await signup.findOneAndUpdate({username:username},{image,email,contact,state,location,description,children,members},{returnNewDocument:true});
+    console.log(req.body)
+    let data=await signup.findOneAndUpdate({username:username},{image,email,phone,state,location,description,children,members},{returnNewDocument:true});
     // console.log(data)
     await data.save();
  
