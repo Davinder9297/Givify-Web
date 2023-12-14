@@ -36,8 +36,8 @@ export default function Gallery() {
                     <div className="bgimg  mt-1 text-xs px-1 py-1 rounded-tl rounded-bl">{da.date}</div>
                 </div>
                 <div className="px-1 mt-1 font-bold text-center xsm:text-sm">{da.title?da.title:'Plantation'}</div>
-                <div className="px-2 xsm:text-xs mt-1 text-justify text-sm ">{da.description? da.description+'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora distinctio sit cum fuga consequuntur ex fugit hic, consequatur ut, labore beatae. Officiis magni, corrupti autmpora distinctio sit cum fuga consequuntur ex mpora distin' :'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora distinctio sit cum fuga consequuntur ex fugit hic, consequatur ut, labore beatae. Officiis magni, corrupti autmpora distinctio sit cum fuga consequuntur ex mpora distinctio sit'}</div>
-                <div><button className='mt-1 py-1 w-[90%] bgimg bg-no-repeat bg-cover rounded-md hover:bg-red-600 hover:text-white'>Donate Now</button></div>
+                <div className="px-2 xsm:text-xs mt-1 text-justify text-sm ">{da.description? da.description.slice(0,270)+'...read more':'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora distinctio sit cum fuga consequuntur ex fugit hic, consequatur ut, labore beatae. Officiis magni, corrupti autmpora distinctio sit cum fuga consequuntur ex mpora distinctio sit'}</div>
+                <div><button className='mt-1 py-1 w-[90%] bgimg bg-no-repeat bg-cover rounded-md hover:bg-red-600 hover:text-white '>Donate Now</button></div>
             </div>
 
                     </>)

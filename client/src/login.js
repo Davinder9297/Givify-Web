@@ -13,8 +13,11 @@ const cookie=new Cookies()
 const navigate=useNavigate()
     const login=async(e)=>{
         e.preventDefault();
+
         try {
+            
             const formData = { username, password};
+            	
             if(username==="" || password===""){
           
                 toast.warning('Every input must be filled', {

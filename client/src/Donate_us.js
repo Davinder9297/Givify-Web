@@ -42,7 +42,7 @@ setdata(totaldata)
 else{
   let temp = data.filter((currelem) => {
 
-    return currelem.location == e.target.value;
+    return currelem.state == e.target.value;
   })
 
   setdata(temp)
