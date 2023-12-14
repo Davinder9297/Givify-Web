@@ -110,6 +110,8 @@ export default function Donate_us(){
 </div>
     )
   })}
+   
+   
     {/* <div className="flex-col h-[350px] w-[300px] rounded-lg mb-5 shadow-2xl hover:scale-95 transition duration-300 ease-in ">
                     <div className=" flex justify-center"><img className=" w-52 h-48 mt-2" src="work1.png" alt="" /></div>
                     <div className="px-1 mt-4 text-lg font-bold">NGO NAME</div>
@@ -126,7 +128,6 @@ export default function Donate_us(){
                         View 
                     </button>
     </div> */}
-    
     </div>
     </div>
 </div>
