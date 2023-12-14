@@ -1,14 +1,14 @@
 import React from 'react';
-import './index.css';
+import '../index.css';
 import { Link } from 'react-router-dom';
 // import SidebarNGO from './';
 import { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import SidebarNGO from './admin/SidebarNGO';
+import SidebarUni from '../adminUni/SidebarUni';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Cookies from 'universal-cookie'
-export default function UpdateProfileNGO() {
+export default function UniProfile() {
     const [email, setemail] = useState('');
     const [location, setlocation] = useState('');
     const [state, setstate] = useState('Select State');
@@ -34,7 +34,6 @@ const handlestate=(e)=>{
       })
 
       const res2=await res.json();
-      console.log(res2.url);
 setimage(res2.url)
    return res2.url;
    
@@ -108,7 +107,7 @@ setimage(res2.url)
 
     return (
         <div className='flex'>
-            <div className='w-[20%]'><SidebarNGO /></div>
+            <div className='w-[20%]'><SidebarUni /></div>
             <ToastContainer
                 position="top-right"
                 autoClose={1000}
