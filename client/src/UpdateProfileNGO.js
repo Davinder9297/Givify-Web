@@ -13,10 +13,10 @@ export default function UpdateProfileNGO() {
     const [location, setlocation] = useState('');
     const [state, setstate] = useState('Select State');
     const [description, setdescription] = useState('');
-    const [contact, setcontact] = useState('');
+    const [phone, setphone] = useState('');
     const [members, setmembers] = useState('');
-    const [children, setchildren] = useState('');
-    const [image, setimage] = useState('');
+    const [childrens, setchildrens] = useState('');
+    const [logo, setlogo] = useState('');
     
 
 let cookies=new Cookies()
@@ -24,17 +24,19 @@ let cookies=new Cookies()
 const handlestate=(e)=>{
     setstate(e.target.value)
 }
-    const imageupload=async (e)=>{
+    const logoupload=async (e)=>{
         const formdata=new FormData()
-        formdata.append("file",e.target.files[0]);
-        formdata.append("upload_preset","mystore")
-      const res= await fetch("https://api.cloudinary.com/v1_1/desiynbby/image/upload",{
-        method:"POST",
-        body:formdata,
-      })
-
+          formdata.append("file",e.target.files[0]);
+          formdata.append("upload_preset","mystore")
+        const res= await fetch("https://api.cloudinary.com/v1_1/desiynbby/image/upload",{
+          method:"POST",
+          body:formdata,
+    
+        })
       const res2=await res.json();
-setimage(res2.url)
+    //   console.log(res2)
+setlogo(res2.url)
+// console.log(res2.url)
    return res2.url;
    
     }
@@ -42,9 +44,9 @@ setimage(res2.url)
         e.preventDefault();
        const username=cookies.get('username');
         try {
-            const formData = { username,image,email,contact,state,location,description,children,members };
+            const formData = { username,logo,email,phone,state,location,description,childrens,members };
             console.log(formData)
-            if(image=="" || email=="" ||  contact=="" ||  state=="" ||  location=="" || description=="" || children=="" || members=="" ){
+            if(logo=="" || email=="" ||  phone=="" ||  state=="" ||  location=="" || description=="" || childrens=="" || members=="" ){
               
                 toast.warning('Every input must be filled', {
                     position: "top-right",
@@ -131,7 +133,7 @@ setimage(res2.url)
                             <div className='flex'>
                                 <div>Profile Picture : </div>
                                 <div className='ml-14'>
-                                    <input type='file' accept="image/png, image/gif, image/jpeg" onChange={imageupload}  className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
+                                    <input type='file' accept="image/png, image/gif, image/jpeg" onChange={logoupload}  className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
                                 </div>
                             </div>
                             <div className='flex'>
@@ -142,10 +144,10 @@ setimage(res2.url)
                             </div>
                             <div className='flex'>
                                 <div>
-                                    Contact :
+                                    phone :
                                 </div>
                                 <div className='ml-24'>
-                                    <input type='text' value={contact} onChange={(e)=>{setcontact(e.target.value)}} placeholder='Enter your email' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
+                                    <input type='text' value={phone} onChange={(e)=>{setphone(e.target.value)}} placeholder='Enter your email' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
                                 </div>
 
                             </div>
@@ -209,10 +211,10 @@ setimage(res2.url)
                             </div>
                             <div className='flex'>
                                 <div>
-                                    Total Children Served :
+                                    Total Childrens Served :
                                 </div>
                                 <div className='ml-24'>
-                                    <input type='email' value={children} onChange={(e)=>{setchildren(e.target.value)}} placeholder='Children in Orgsnization' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
+                                    <input type='email' value={childrens} onChange={(e)=>{setchildrens(e.target.value)}} placeholder='Childrens in Orgsnization' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
 
                                 </div>
                             </div>
