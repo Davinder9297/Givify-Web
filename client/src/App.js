@@ -44,7 +44,8 @@ function App() {
 
           
       </Routes>
-      <Footer/>
+      <div className='xsm:hidden' ><Footer/></div>
+      
     </BrowserRouter>
   
       {/* <Videoadded/> */}
