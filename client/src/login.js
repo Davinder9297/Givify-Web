@@ -13,8 +13,11 @@ const cookie=new Cookies()
 const navigate=useNavigate()
     const login=async(e)=>{
         e.preventDefault();
+
         try {
+            
             const formData = { username, password};
+            	
             if(username==="" || password===""){
           
                 toast.warning('Every input must be filled', {
@@ -39,9 +42,12 @@ const navigate=useNavigate()
                 body: JSON.stringify(formData),
             });
             if (response.ok) {
+
                 const data = await response.json();
-                console.log(data)
+                // console.log(data)
                 cookie.set("login",true)
+                cookie.set(data.type,true)
+                cookie.set('username',username)
                 toast.success('Login Successfully', {
                     position: "top-right",
                     autoClose: 1000,
@@ -52,7 +58,7 @@ const navigate=useNavigate()
                     progress: undefined,
     
                 });    
-                navigate('/')         
+                navigate('/Adminpage')         
             } else {              
                 toast.warning('Invaild Credentials', {
                     position: "top-right",

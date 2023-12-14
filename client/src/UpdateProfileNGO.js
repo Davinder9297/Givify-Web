@@ -1,124 +1,125 @@
 import React from 'react';
 import './index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 // import SidebarNGO from './';
 import { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import SidebarNGO from './admin/SidebarNGO';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Cookies from 'universal-cookie'
 export default function UpdateProfileNGO() {
-    const [statee, setStatee] = useState('Select State');
-    const handleeve = (e) => {
-        setStatee(e.target.value);
-        console.log(e.target.value);
+    const [email, setemail] = useState('');
+    const [location, setlocation] = useState('');
+    const [state, setstate] = useState('Select State');
+    const [description, setdescription] = useState('');
+    const [contact, setcontact] = useState('');
+    const [members, setmembers] = useState('');
+    const [children, setchildren] = useState('');
+    const [image, setimage] = useState('');
+    
+
+let cookies=new Cookies()
+
+const handlestate=(e)=>{
+    setstate(e.target.value)
+}
+    const imageupload=async (e)=>{
+        const formdata=new FormData()
+        formdata.append("file",e.target.files[0]);
+        formdata.append("upload_preset","mystore")
+      const res= await fetch("https://api.cloudinary.com/v1_1/desiynbby/image/upload",{
+        method:"POST",
+        body:formdata,
+      })
+
+      const res2=await res.json();
+setimage(res2.url)
+   return res2.url;
+   
     }
+    const handlesubmit = async (e) => {
+        e.preventDefault();
+       const username=cookies.get('username');
+        try {
+            const formData = { username,image,email,contact,state,location,description,children,members };
+            console.log(formData)
+            if(image=="" || email=="" ||  contact=="" ||  state=="" ||  location=="" || description=="" || children=="" || members=="" ){
+              
+                toast.warning('Every input must be filled', {
+                    position: "top-right",
+                    autoClose: 1000,
+                    hideProgressBar: false ,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+    
+                });
+            }
+               
+            else{
+                
+            const response = await fetch('http://localhost:5000/profile', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                // const data = await response.json();
+               
+                toast.success('Details Updated Successfully', {
+                    position: "top-right",
+                    autoClose: 1000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+    
+                });
+              
+                // alert(data.message);
+            } 
+            }
+
+        
+        } catch (error) {
+    
+            toast.warning('Technical issues', {
+                position: "top-right",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+
+            });
+            // console.error('Error:', error);
+            // alert('An error occurred while sending the request');
+        }
+    };
+
 
     return (
         <div className='flex'>
             <div className='w-[20%]'><SidebarNGO /></div>
-
-            {/* <div className='w-full border-2 border-solid border-red-200'> */}
-            <div to="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
-            {/* 
-                <div className="container">
-                    <div className="view-account">
-                            <div className="module-inner">
-                                <div className="side-bar  border-red-900 border-solid border-2 w-[30%]">
-                                    <div className="user-info">
-                                        <img className="img-profile img-circle img-responsive center-block" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
-                                        <ul className="meta list list-unstyled">
-                                            <li className="name">Rebecca Sanders
-                                                <label className="label label-info">UX Designer</label>
-                                            </li>
-                                            <li className="email">div href="#/">Rebecca.S@website.com</a></li>
-                                            <li className="activity">Last logged in: Today at 2:18pm</li>
-                                        </ul>
-                                    </div>
-                                    <nav className="side-menu">
-                                        <ul className="nav">
-                                            <li className="active">div href="#/"><span className="fa fa-user"></span> Profile</a></li>
-                                            <li>div href="#/"><span className="fa fa-cog"></span> Settings</a></li>
-                                            <li>div href="#/"><span className="fa fa-credit-card"></span> Billing</a></li>
-                                            <li>div href="#/"><span className="fa fa-envelope"></span> Messages</a></li>
-
-                                            <li>div href="user-drive.html"><span className="fa fa-th"></span> Drive</a></li>
-                                            <li>div href="#/"><span className="fa fa-clock-o"></span> Reminders</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-
-
-                                <div className="content-panel">
-                                    <h2 className="title">Profile<span className="pro-label label label-warning">PRO</span></h2>
-                                    <form className="form-horizontal">
-                                        <fieldset className="fieldset">
-                                            <h3 className="fieldset-title">Personal Info</h3>
-                                            <div className="form-group avatar">
-                                                <figure className="figure col-md-2 col-sm-3 col-xs-12">
-                                                    <img className="img-rounded img-responsive" src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
-                                                </figure>
-                                                <div className="form-inline col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="file" className="file-uploader pull-left" />
-                                                    <button type="submit" className="btn btn-sm btn-default-alt pull-left">Update Image</button>
-                                                </div>
-                                            </div>
-                                            <div className="form-group">
-                                                <label className="col-md-2 col-sm-3 col-xs-12 control-label">User Name</label>
-                                                <div className="col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="text" className="form-control" value="Rebecca" />
-                                                </div>
-                                            </div>
-
-                                            <div className="form-group">
-                                                <label className="col-md-2 col-sm-3 col-xs-12 control-label">First Name</label>
-                                                <div className="col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="text" className="form-control" value="Rebecca" />
-                                                </div>
-                                            </div>
-                                            <div className="form-group">
-                                                <label className="col-md-2 col-sm-3 col-xs-12 control-label">Last Name</label>
-                                                <div className="col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="text" className="form-control" value="Sanders" />
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                        <fieldset className="fieldset">
-                                            <h3 className="fieldset-title">Contact Info</h3>
-                                            <div className="form-group">
-                                                <label className="col-md-2  col-sm-3 col-xs-12 control-label">Email</label>
-                                                <div className="col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="email" className="form-control" value="Rebecca@website.com" />
-                                                    <p className="help-block">This is the email </p>
-                                                </div>
-                                            </div>
-                                            <div className="form-group">
-                                                <label className="col-md-2  col-sm-3 col-xs-12 control-label">Twitter</label>
-                                                <div className="col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="text" className="form-control" value="SpeedyBecky" />
-                                                    <p className="help-block">Your twitter username</p>
-                                                </div>
-                                            </div>
-                                            <div className="form-group">
-                                                <label className="col-md-2  col-sm-3 col-xs-12 control-label">divedin</label>
-                                                <div className="col-md-10 col-sm-9 col-xs-12">
-                                                    <input type="url" className="form-control" value="https://www.divedin.com/in/lorem" />
-                                                    <p className="help-block">eg. https://www.divedin.com/in/yourname</p>
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                        <hr />
-                                        <div className="form-group">
-                                            <div className="col-md-10 col-sm-9 col-xs-12 col-md-push-2 col-sm-push-3 col-xs-push-0">
-                                                <input className="btn btn-primary" type="submit" value="Update Profile" />
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-            </div> */}
+            <ToastContainer
+                position="top-right"
+                autoClose={1000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
+            
 
             <div className='w-full border-2 border-solid border-red-900 ml-5 flex'>
                 {/* sidebar */}
@@ -128,9 +129,15 @@ export default function UpdateProfileNGO() {
                         <div className='text-xl'>Institution Name</div>
                         <div className='text-left mt-2 p-7 ml-8 space-y-4'>
                             <div className='flex'>
+                                <div>Profile Picture : </div>
+                                <div className='ml-14'>
+                                    <input type='file' accept="image/png, image/gif, image/jpeg" onChange={imageupload}  className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
+                                </div>
+                            </div>
+                            <div className='flex'>
                                 <div>Email address : </div>
                                 <div className='ml-14'>
-                                    <input type='email' placeholder='Enter your email' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
+                                    <input type='email' value={email} onChange={(e)=>{setemail(e.target.value)}} placeholder='Enter your email' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
                                 </div>
                             </div>
                             <div className='flex'>
@@ -138,16 +145,16 @@ export default function UpdateProfileNGO() {
                                     Contact :
                                 </div>
                                 <div className='ml-24'>
-                                    <input type='email' placeholder='Enter your email' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
+                                    <input type='text' value={contact} onChange={(e)=>{setcontact(e.target.value)}} placeholder='Enter your email' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
                                 </div>
 
                             </div>
                             <div className='flex'>
                                 <div>
-                                    location :
+                                    Location :
                                 </div>
                                 <div className='ml-24'>
-                                    <input type='email' placeholder='Enter your email' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
+                                    <input type='text' value={location} onChange={(e)=>{setlocation(e.target.value)}} placeholder='Enter your email' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
 
                                 </div>
                             </div>
@@ -156,39 +163,22 @@ export default function UpdateProfileNGO() {
                                     State :
                                 </div>
                                 <div className="btn-group ml-20">
-                                    <button type="button" className="btn btn-light dropdown-toggle w-48 shadow-none p-0 ml-10" data-bs-toggle="dropdown" aria-expanded="false">
-                                        {statee}
-                                    </button>
-                                    <ul className="dropdown-menu">
-                                        <li><Button className="dropdown-item py-0" value={'Assam'} onClick={handleeve}>Assam</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Bihar'} onClick={handleeve}>Bihar</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Chandigarh'} onClick={handleeve}>Chandigarh</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Delhi'} onClick={handleeve}>Delhi</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Daman & Diu'} onClick={handleeve}>Daman & Diu</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Uttar Pradesh'} onClick={handleeve}>Uttar Pradesh</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Punjab'} onClick={handleeve}>Punjab</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Andhra Pradesh'} onClick={handleeve}>Chandigarh</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Kerela'} onClick={handleeve}>Kerela</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Tamil Nadu'} onClick={handleeve}>Tamil Nadu</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Haryana'} onClick={handleeve}>Haryana</Button></li>
-                                        {/* <li><hr className="dropdown-divider py-0" /></li> */}
-                                        <li><Button className="dropdown-item py-0" value={'Goa'} onClick={handleeve}>Goa</Button></li>
-                                    </ul>
+                                <select name="state" value={state} onChange={(e) => { setstate(e.target.value) }} className=" outline cursor-pointer outline-1 px-2 rounded-sm py-[4px] w-full text-base text-gray-400 outline-gray-300 mt-1">
+                                <option className="" value="">--SELECT--</option >
+                                <option className="" value="Assam">Assam</option >
+                                <option className="" value="Bihar">Bihar</option >
+                                <option className="" value="Chandigarh">Chandigarh</option >
+                                <option className="" value="Delhi">Delhi</option >
+                                <option className="" value="Goa">Goa</option >
+                                <option className="" value="Gujarat">Gujarat</option >
+                                <option className="" value="Punjab">Punjab</option >
+                            </select>
+                                   
                                 </div>
                             </div>
                         <div>
                             <div>Description</div>
-                            <textarea className='border-2 border-solid border-gray-100 w-[95%] p-2' placeholder='Enter the description'></textarea>
+                            <textarea value={description} onChange={(e)=>{setdescription(e.target.value)}} className='border-2 border-solid border-gray-100 w-[95%] p-2' placeholder='Enter the description'></textarea>
                         </div>
 
                         </div>
@@ -206,9 +196,28 @@ export default function UpdateProfileNGO() {
                     </nav > */}
                 </div >
 
-            <div className='border-2 border-solid border-gray-600 w-[50%]'>
+            <div className='border-2 border-solid border-gray-600 w-[50%] p-10'>
                 <div>
+                <div className='flex space-y-4'>
+                                <div>
+                                    Total members of Organization :
+                                </div>
+                                <div className='ml-24'>
+                                    <input type='text' value={members} onChange={(e)=>{setmembers(e.target.value)}} placeholder='Members of organization' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
 
+                                </div>
+                            </div>
+                            <div className='flex'>
+                                <div>
+                                    Total Children Served :
+                                </div>
+                                <div className='ml-24'>
+                                    <input type='email' value={children} onChange={(e)=>{setchildren(e.target.value)}} placeholder='Children in Orgsnization' className=' border-2 border-solid border-gray-400 rounded-md pl-1' />
+
+                                </div>
+                            </div>
+                            <button onClick={handlesubmit} className='flex bg-cyan-400 text-black font-semibold w-full justify-center py-[6px] rounded-md mt-6 space-x-1 items-center'>Save
+                            </button>
                 </div>
             </div>
             </div >

@@ -5,17 +5,17 @@ import {BsCloudSun,BsCarFrontFill} from 'react-icons/bs';
 import {PiDog} from 'react-icons/pi';
 export default function OurServices(){
     return(<>
-    <div className="h-auto w-full flex-col mt-3 mb-10 ">
-<div className="flex justify-center "><img src="hr.png" alt="" /></div>
+    <div className="h-auto w-full flex-col mt-3 mb-10 xsm:!mt-0">
+<div className="flex justify-center"><img src="hr.png" alt="" /></div>
 <div className="flex-col  h-auto  w-full ">
-  <div className="flex mt-3 justify-evenly xsm:w-[100%]">
-    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md xsm:text-base "><button ><GiFoodTruck className='m-auto mt-2' size={70}/><div className='mt-2 '>Food</div></button></div>
-    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md xsm:text-base"><button ><BiBookReader className='m-auto mt-2' size={70}/><div className='mt-2'>Education</div></button></div>
-    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md xsm:hidden"><button ><GiDress className='m-auto mt-2' size={70}/><div className='mt-2'>Cloths</div></button></div>
-    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md xsm:text-base "><button ><FaHouseMedicalFlag className='m-auto mt-2' size={70}/><div className='mt-2'>Medical</div></button></div>
-    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md  xsm:hidden"><button ><BsCloudSun className='m-auto mt-2' size={70}/><div className='mt-2'>Nature</div></button></div>
-    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md xsm:hidden "><button ><PiDog className='m-auto mt-2' size={70}/><div className='mt-2'>Animal</div></button></div>
-    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md xsm:hidden"><button ><BsCarFrontFill className='m-auto mt-2' size={70}/><div className='mt-2 '>Drives</div></button></div>
+  <div className="flex mt-3 justify-evenly">
+    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md xsm:w-16 xsm:h-16 xsm:!p-0 xsm:text-sm"><button ><GiFoodTruck className='m-auto mt-2 xsm:h-10' size={70}/><div className='mt-2 xsm:!mt-5'>Food</div></button></div>
+    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md xsm:w-16 xsm:h-16 xsm:!p-0 xsm:text-sm"><button ><BiBookReader className='m-auto mt-2 xsm:h-10' size={70}/><div className='mt-2 xsm:!mt-5'>Education</div></button></div>
+    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md xsm:w-16 xsm:h-16 xsm:!p-0 xsm:text-sm"><button ><GiDress className='m-auto mt-2 xsm:h-10' size={70}/><div className='mt-2 xsm:!mt-5'>Cloths</div></button></div>
+    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md xsm:w-16 xsm:h-16 xsm:!p-0 xsm:text-sm"><button ><FaHouseMedicalFlag className='m-auto mt-2 xsm:h-10' size={70}/><div className='mt-2 xsm:!mt-5'>Medical</div></button></div>
+    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md xsm:w-16 xsm:h-16 xsm:!p-0 xsm:text-sm"><button ><BsCloudSun className='m-auto mt-2 xsm:h-10' size={70}/><div className='mt-2 xsm:!mt-5'>Nature</div></button></div>
+    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md xsm:w-16 xsm:h-16 xsm:!p-0 xsm:text-sm  xsm:hidden"><button ><PiDog className='m-auto mt-2 xsm:h-10' size={70}/><div className='mt-2 xsm:!mt-5'>Animal</div></button></div>
+    <div className="w-40 h-36 bgimg p-3 text-xl rounded-md xsm:w-16 xsm:h-16 xsm:!p-0 xsm:text-sm  xsm:hidden"><button ><BsCarFrontFill className='m-auto mt-2 xsm:h-10' size={70}/><div className='mt-2 xsm:!mt-5'>Drives</div></button></div>
    </div>
 </div>
      </div> 

@@ -6,7 +6,7 @@ export default function About_us() {
     return (<>
         <div>
             {/* <Header/> */}
-            <div className=" h-30 w-full p-5 mt-3  ">
+            <div className=" h-30 w-full p-2 mt-3 ml-5 ">
                 <div className=' text-left text-4xl font-BlinkMacSystemFont font-extrabold text-blue-900'>ABOUT US</div>
             </div>
 
@@ -24,7 +24,7 @@ export default function About_us() {
                 </div>
             </div>
 
-            <div className=" my-8 w-full h-[650px] bg-blue-900">
+            <div className=" my-8 w-full h-[650px] bg-blue-900 overflow-x-hidden">
                 <div className=" p-12 text-center text-white text-5xl font-BlinkMacSystemFont">WHAT WE DO </div>
                 <div className=" pb-2 px-2 text-center text-white text-2xl font-serif">Fuelled with enthusiasm, Givify’s founders gave a shape to their dream. Over the last two years, Givify has evolved as a sustainable Indian social institution – committed to do real work on the ground, and make the society and businesses inclusive in the process of bringing change. </div>
 
