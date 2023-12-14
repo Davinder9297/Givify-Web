@@ -3,7 +3,7 @@
 
 // import Sidebar from "../Sidebar";
 import SidebarUni from "./SidebarUni";
-import updateProfileNGO from "../UpdateProfileNGO";
+import UniDashboard from "../adminUni/UniDashboard";
 // import NGODashboard from "../NGODashboard";
 
 // import { Link } from "react-router-dom";
@@ -17,7 +17,7 @@ export default function UniAdmin() {
 
             <SidebarUni/>
             {/* <updateProfileNGO/> */}
-            {/* <NGODashboard/> */}
+            <UniDashboard/>
         </div>
 
 

@@ -23,6 +23,7 @@ import GenerateReq from './GenerateReq';
 import UniAdmin from './adminUni/UniAdmin';
 import UniProfile from './adminUni/UniProfile';
 import UploadEventUni from './adminUni/UploadEventUni';
+import UniDashboard from './adminUni/UniDashboard';
 function App() {
   return (
     <div className="App h-screen">
@@ -44,6 +45,7 @@ function App() {
           <Route path="/UploadEvent" element={<UploadEvent/>} />
           <Route path="/GenerateReq" element={<GenerateReq/>} />
           <Route path="/NgoAdmin" element={<NgoAdmin/>} />
+          <Route path="/UniDashboard" element={<UniDashboard/>} />
           <Route path="/UniAdmin" element={<UniAdmin/>} />
           <Route path="/UniProfile" element={<UniProfile/>} />
           <Route path="/UploadEventUni" element={<UploadEventUni/>} />
