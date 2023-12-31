@@ -28,7 +28,7 @@ const submit = async (e) => {
       }
       else{
           
-      const response = await fetch('http://localhost:5000/contact', {
+      const response = await fetch('https://givify-yce1.onrender.com/contact', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',

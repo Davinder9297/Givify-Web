@@ -12,7 +12,7 @@ export default function Donate_us() {
   let navigate=useNavigate()
   
   useEffect(() => {
-    const url = "http://localhost:5000/signup";
+    const url = "https://givify-yce1.onrender.com/signup";
     // const url1 = "http://localhost:3000/api/placementevents";
 
 

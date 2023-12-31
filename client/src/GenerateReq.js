@@ -25,7 +25,7 @@ const upload=async()=>{
     // let userid=Cookies.get('login')
     let username=cookie.get('username')
     const data={title,description,username,type}
-    const res=await fetch('http://localhost:5000/requirements', {
+    const res=await fetch('https://givify-yce1.onrender.com/requirements', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',

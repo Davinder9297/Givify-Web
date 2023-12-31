@@ -13,7 +13,7 @@ const [alldata, setalldata] = useState([])
     // console.log(searchParams.get('id'))
     let id=searchParams.get('id')
    
-            const response = await fetch('http://localhost:5000/singlepage', {
+            const response = await fetch('https://givify-yce1.onrender.com/singlepage', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

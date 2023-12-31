@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 export default function Gallery() {
     const [data, setdata] = useState([])
     useEffect(() => {
-        const url = "http://localhost:5000/gallery";
+        const url = "https://givify-yce1.onrender.com/gallery";
         // const url1 = "http://localhost:3000/api/placementevents";
       
       
